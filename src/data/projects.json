@@ -3,104 +3,152 @@
     "id": "portfolio-website",
     "title": "Portfolio Website",
     "category": "Personal",
-    "description": "A modern, data-driven React portfolio with polished navigation, reusable components, and recruiter-focused content architecture.",
+    "description": "A modern, data-driven React portfolio with polished navigation, interactive backgrounds, reusable components, and recruiter-focused content architecture.",
+    "details": [
+      "Built with React, Vite, Tailwind CSS, React Router, and ReactBits-inspired visual components.",
+      "Implemented interactive Galaxy background, collapsible navigation, responsive pages, and JSON-driven content.",
+      "Designed dedicated pages for About, Contact & CV, Extracurricular Activities, and future project/internship expansion."
+    ],
     "technologies": ["React", "Vite", "Tailwind CSS", "React Router", "ReactBits"],
     "image": "/src/assets/images/project-portfolio.svg",
     "github": "https://github.com/YoussefAdly14/portofolio-website",
     "demo": "",
     "featured": true,
     "date": "2026",
-    "status": "In Progress"
+    "status": "In Progress",
+    "mediaNote": "Space reserved for a homepage walkthrough video."
   },
   {
-    "id": "travel-planner",
-    "title": "Travel Planner",
+    "id": "foodics-ordering-backend",
+    "title": "Online Food Ordering Backend System",
     "category": "Personal",
-    "description": "Trip planning interface for comparing destinations, budgets, itineraries, and saved travel preferences.",
-    "technologies": ["React", "Node.js", "Express", "MongoDB"],
-    "image": "/src/assets/images/project-travel.svg",
-    "github": "https://github.com/YoussefAdly14",
-    "demo": "",
-    "featured": true,
-    "date": "2025",
-    "status": "Prototype"
-  },
-  {
-    "id": "backend-apis",
-    "title": "Backend APIs Toolkit",
-    "category": "Personal",
-    "description": "A collection of REST API patterns covering authentication boundaries, validation, logging, and database-backed resources.",
-    "technologies": ["Node.js", "Express", "PostgreSQL", "Prisma", "Docker"],
+    "description": "A Node.js backend for an online food ordering and e-commerce application developed during the Foodics backend internship.",
+    "details": [
+      "Developed RESTful APIs with role-based authentication for users and admins.",
+      "Integrated PostgreSQL with Prisma ORM to manage users, products, carts, and orders.",
+      "Implemented cart-to-order lifecycle, asynchronous backend logic, Jest unit tests, Docker setup, and Postman API validation."
+    ],
+    "technologies": ["Node.js", "PostgreSQL", "Prisma", "Docker", "Jest", "Postman"],
     "image": "/src/assets/images/project-api.svg",
-    "github": "https://github.com/YoussefAdly14",
+    "github": "https://github.com/YoussefAdly14/FoodicsFolks-foolics-api",
     "demo": "",
     "featured": true,
-    "date": "2025",
-    "status": "Maintained"
+    "date": "Jul 2025 - Sep 2025",
+    "status": "Completed",
+    "mediaNote": "Backend architecture/demo video can be added later."
   },
   {
-    "id": "security-lab",
-    "title": "Security Lab Notes",
-    "category": "Personal",
-    "description": "Hands-on security exercises documenting network scanning, threat modeling, secure coding, and defensive analysis.",
-    "technologies": ["Linux", "Python", "Wireshark", "Bash"],
-    "image": "/src/assets/images/project-security.svg",
-    "github": "https://github.com/YoussefAdly14",
-    "demo": "",
-    "featured": false,
-    "date": "2025",
-    "status": "Learning"
-  },
-  {
-    "id": "database-engine",
-    "title": "Mini Database Engine",
+    "id": "travel-web-application",
+    "title": "Travel Web Application",
     "category": "University",
-    "description": "Course project implementing core database concepts including storage, indexing, query operations, and persistence.",
-    "technologies": ["Java", "Data Structures", "Indexing", "File I/O"],
+    "description": "A full-stack travel website where users can browse destinations, create accounts, search places, and manage a want-to-go list.",
+    "details": [
+      "Built a client-server full-stack web application using Node.js, Express.js, MongoDB, EJS, JavaScript, and HTML.",
+      "Implemented authentication, sessions, secure routing, and access control.",
+      "Designed MongoDB CRUD operations, duplicate validation, destination pages, want-to-go lists, and substring-based search."
+    ],
+    "technologies": ["Node.js", "Express.js", "MongoDB", "EJS", "JavaScript"],
+    "image": "/src/assets/images/project-travel.svg",
+    "github": "https://github.com/YoussefAdly14/Travel",
+    "demo": "",
+    "featured": true,
+    "date": "Sep 2025 - Jan 2026",
+    "status": "Completed",
+    "mediaNote": "Future slot for a user-flow demo."
+  },
+  {
+    "id": "hr-management-system",
+    "title": "HR Management System",
+    "category": "University",
+    "description": "A full-stack HR management web application for payroll, attendance, leave approvals, and role-based administration.",
+    "details": [
+      "Developed with ASP.NET and SQL Server using Admin, HR, and Employee access roles.",
+      "Designed relational database procedures, functions, and views for payroll, attendance, deductions, leave workflows, and approvals.",
+      "Implemented authentication, automated payroll calculations, performance tracking, and frontend-backend validation."
+    ],
+    "technologies": ["ASP.NET", "SQL Server", "C#", "Database Design"],
     "image": "/src/assets/images/project-database.svg",
-    "github": "https://github.com/YoussefAdly14",
+    "github": "https://github.com/YoussefAdly14/DB3",
     "demo": "",
     "featured": true,
-    "date": "2025",
-    "status": "Completed"
+    "date": "Sep 2025 - Jan 2026",
+    "status": "Completed",
+    "mediaNote": "Reserved for dashboard screenshots or walkthrough video."
   },
   {
-    "id": "operating-systems",
-    "title": "Operating Systems Simulator",
+    "id": "operating-system-simulator",
+    "title": "Operating System Simulator",
     "category": "University",
-    "description": "Simulation of process scheduling, memory management, synchronization, and OS resource coordination.",
-    "technologies": ["C", "Linux", "Scheduling", "Concurrency"],
+    "description": "A C-based simulation of monolithic operating system concepts with process scheduling, memory management, disk swapping, and resource mutexes.",
+    "details": [
+      "Built a custom text-based program interpreter for OS course workflows.",
+      "Implemented memory management with disk swapping and synchronized resource access.",
+      "Compared multiple process scheduling algorithms and simulated core OS behavior."
+    ],
+    "technologies": ["C", "Operating Systems", "Scheduling", "Memory Management"],
     "image": "/src/assets/images/project-os.svg",
-    "github": "https://github.com/YoussefAdly14",
+    "github": "https://github.com/YoussefAdly14/Operating-System-Project-",
     "demo": "",
-    "featured": false,
-    "date": "2025",
-    "status": "Completed"
+    "featured": true,
+    "date": "2026",
+    "status": "Completed",
+    "mediaNote": "Terminal/demo recording can be embedded later."
   },
   {
-    "id": "embedded-controller",
-    "title": "Embedded Controller",
+    "id": "computer-architecture-processor",
+    "title": "Computer Architecture Processor",
     "category": "University",
-    "description": "Microcontroller-based control system with sensor input, actuator output, and timing-sensitive logic.",
-    "technologies": ["C", "Embedded C", "Microcontrollers", "UART"],
-    "image": "/src/assets/images/project-embedded.svg",
-    "github": "https://github.com/YoussefAdly14",
-    "demo": "",
-    "featured": false,
-    "date": "2024",
-    "status": "Completed"
-  },
-  {
-    "id": "computer-architecture",
-    "title": "Computer Architecture Modules",
-    "category": "University",
-    "description": "Digital architecture exercises covering datapaths, control units, instruction execution, and low-level system behavior.",
-    "technologies": ["Verilog", "Digital Logic", "Computer Architecture"],
+    "description": "A C-based simulation of a pipelined Harvard Architecture processor for the Computer Systems Architecture course at GUC.",
+    "details": [
+      "Implemented a custom 16-bit instruction set architecture.",
+      "Built a 3-stage instruction pipeline with hazard handling.",
+      "Simulated processor behavior for the Double McHarvard package specification."
+    ],
+    "technologies": ["C", "Computer Architecture", "Pipelining", "ISA"],
     "image": "/src/assets/images/project-architecture.svg",
-    "github": "https://github.com/YoussefAdly14",
+    "github": "https://github.com/YoussefAdly14/Computer-Architecture-Project",
     "demo": "",
     "featured": false,
-    "date": "2024",
-    "status": "Completed"
+    "date": "2026",
+    "status": "Completed",
+    "mediaNote": "Reserved for architecture diagram/video."
+  },
+  {
+    "id": "enhance-app",
+    "title": "Enhance",
+    "category": "Personal",
+    "description": "A personal gym, macro, and entertainment app concept from GitHub.",
+    "details": [
+      "Created as a personal product experiment combining fitness and entertainment flows.",
+      "Structured as an app idea for tracking gym routines, macros, and user lifestyle preferences.",
+      "More implementation details and screenshots can be added later."
+    ],
+    "technologies": ["App Development", "Product Design"],
+    "image": "/src/assets/images/project-embedded.svg",
+    "github": "https://github.com/YoussefAdly14/Enhance",
+    "demo": "",
+    "featured": false,
+    "date": "2026",
+    "status": "In Progress",
+    "mediaNote": "Reserved for app demo media."
+  },
+  {
+    "id": "database-engine-milestone",
+    "title": "Database 2 Milestone Project",
+    "category": "University",
+    "description": "A Java database coursework milestone project from GitHub.",
+    "details": [
+      "Built as part of database coursework at GUC.",
+      "Uses Java to practice backend/database concepts and milestone-based delivery.",
+      "More project details can be expanded when final documentation is added."
+    ],
+    "technologies": ["Java", "Databases", "Coursework"],
+    "image": "/src/assets/images/project-database.svg",
+    "github": "https://github.com/YoussefAdly14/Database-2-Milestone-1-Project",
+    "demo": "",
+    "featured": false,
+    "date": "2026",
+    "status": "Completed",
+    "mediaNote": "Reserved for diagrams or screenshots."
   }
 ]

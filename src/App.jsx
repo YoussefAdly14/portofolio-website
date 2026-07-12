@@ -7,13 +7,11 @@ const HomePage = lazy(() => import('./pages/Home/HomePage.jsx'));
 const AboutPage = lazy(() => import('./pages/About/AboutPage.jsx'));
 const ContactPage = lazy(() => import('./pages/Contact/ContactPage.jsx'));
 const ExtracurricularPage = lazy(() => import('./pages/Extracurricular/ExtracurricularPage.jsx'));
+const InternshipsPage = lazy(() => import('./pages/Internships/InternshipsPage.jsx'));
+const ProjectsPage = lazy(() => import('./pages/Projects/ProjectsPage.jsx'));
 const PlaceholderPage = lazy(() => import('./pages/PlaceholderPage.jsx'));
 
-const pageRoutes = navigation.filter(item => !['/', '/about', '/contact', '/extracurricular'].includes(item.href));
-const projectSubRoutes = [
-  { label: 'Personal Projects', href: '/projects/personal' },
-  { label: 'University Projects', href: '/projects/university' }
-];
+const pageRoutes = navigation.filter(item => !['/', '/about', '/contact', '/extracurricular', '/internships', '/projects'].includes(item.href));
 
 function App() {
   return (
@@ -30,14 +28,11 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="extracurricular" element={<ExtracurricularPage />} />
+          <Route path="internships" element={<InternshipsPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="projects/personal" element={<ProjectsPage />} />
+          <Route path="projects/university" element={<ProjectsPage />} />
           {pageRoutes.map(item => (
-            <Route
-              key={item.href}
-              path={item.href.replace(/^\//, '')}
-              element={<PlaceholderPage title={item.label} href={item.href} />}
-            />
-          ))}
-          {projectSubRoutes.map(item => (
             <Route
               key={item.href}
               path={item.href.replace(/^\//, '')}

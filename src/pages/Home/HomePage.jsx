@@ -289,7 +289,7 @@ function HomePage() {
             />
 
             <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-2">
-              {internships.map(internship => (
+              {internships.slice(0, 3).map(internship => (
                 <BorderGlow
                   key={internship.id}
                   className="h-full overflow-hidden"

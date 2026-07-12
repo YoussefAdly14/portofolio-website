@@ -1,38 +1,89 @@
 [
   {
-    "id": "backend-engineering-intern",
-    "company": "NileTech Labs",
-    "logo": "/src/assets/logos/company-niletech.svg",
-    "position": "Backend Engineering Intern",
-    "duration": "Jul 2025 - Sep 2025",
-    "description": "Contributed to backend service development with a focus on API reliability, database modeling, and maintainable code.",
+    "id": "flyrank-machine-learning",
+    "company": "FlyRank",
+    "position": "Machine Learning Course / Internship",
+    "duration": "2026 - Present",
+    "location": "Remote / Ongoing",
+    "description": "Ongoing machine learning course and internship experience. Details, photos, and project outcomes will be added later.",
     "responsibilities": [
-      "Developed REST API endpoints for internal service workflows.",
-      "Designed relational database schemas for feature data.",
-      "Improved validation and error handling across API routes.",
-      "Collaborated with engineers through code reviews and sprint planning."
+      "Learning applied machine learning concepts through a structured course/internship format.",
+      "Building practical ML knowledge to support future AI and software projects.",
+      "Project description and media will be added when available."
     ],
-    "technologies": ["Node.js", "Express", "PostgreSQL", "Prisma", "Docker", "Git"],
-    "skills": ["Backend Development", "Database Design", "Code Review", "Agile Development"],
-    "certificate": "",
-    "website": "https://example.com"
+    "technologies": ["Machine Learning", "Python", "AI Fundamentals"],
+    "skills": ["Machine Learning", "Problem Solving", "Applied AI"],
+    "status": "Ongoing",
+    "website": ""
   },
   {
-    "id": "embedded-systems-intern",
-    "company": "Cairo Embedded Systems",
-    "logo": "/src/assets/logos/company-embedded.svg",
-    "position": "Embedded Software Intern",
-    "duration": "Aug 2024 - Sep 2024",
-    "description": "Worked on firmware exercises, hardware communication protocols, and debugging workflows for embedded devices.",
+    "id": "foodics-frontend-engineering",
+    "company": "Foodics",
+    "position": "Frontend Software Engineering Intern",
+    "duration": "2026 - Present",
+    "location": "Ongoing",
+    "description": "Ongoing frontend software engineering internship at Foodics, currently involving a project. Full description and photos will be added later.",
     "responsibilities": [
-      "Implemented microcontroller routines using embedded C.",
-      "Tested UART and GPIO communication flows.",
-      "Documented debugging steps and hardware assumptions.",
-      "Supported integration checks for sensor-based prototypes."
+      "Working on a frontend software engineering project.",
+      "Practicing production-style frontend workflows and implementation.",
+      "More project details will be added when available."
     ],
-    "technologies": ["Embedded C", "C", "UART", "GPIO", "Git"],
-    "skills": ["Firmware Basics", "Hardware Debugging", "Technical Documentation", "Problem Solving"],
-    "certificate": "",
-    "website": "https://example.com"
+    "technologies": ["Frontend Engineering", "JavaScript", "React"],
+    "skills": ["Frontend Development", "UI Implementation", "Team Workflow"],
+    "status": "Ongoing",
+    "website": ""
+  },
+  {
+    "id": "geidea-it-security",
+    "company": "Geidea",
+    "position": "IT & Security Intern",
+    "duration": "Aug 2025 - Nov 2025",
+    "location": "New Cairo, Egypt",
+    "description": "IT and security internship focused on workstation setup, troubleshooting, support workflows, and issue tracking.",
+    "responsibilities": [
+      "Installed and configured Windows OS on employee devices, including BIOS access and system setup.",
+      "Diagnosed and resolved hardware and software issues for employee workstations.",
+      "Provided end-user technical support to ensure minimal downtime.",
+      "Tracked and documented issues using Jira ticketing workflows."
+    ],
+    "technologies": ["Windows", "BIOS", "Jira", "IT Support"],
+    "skills": ["Troubleshooting", "Technical Support", "Documentation", "Security Basics"],
+    "status": "Completed",
+    "website": ""
+  },
+  {
+    "id": "foodics-backend-engineering",
+    "company": "Foodics",
+    "position": "Backend Software Engineering Intern",
+    "duration": "Jul 2025 - Aug 2025",
+    "location": "New Cairo, Egypt",
+    "description": "Backend internship working within an engineering team on a production-style online food ordering system.",
+    "responsibilities": [
+      "Contributed to backend feature development using Node.js and asynchronous programming.",
+      "Worked with Git, GitHub, pull requests, and team workflows.",
+      "Used Docker for consistent development environments.",
+      "Validated APIs using Postman and wrote unit tests with Jest."
+    ],
+    "technologies": ["Node.js", "PostgreSQL", "Prisma", "Docker", "Postman", "Jest"],
+    "skills": ["Backend Development", "API Testing", "Team Workflow", "Async Programming"],
+    "status": "Completed",
+    "website": ""
+  },
+  {
+    "id": "software-delivery-internship",
+    "company": "Software Delivery Internship",
+    "position": "Software Delivery Intern",
+    "duration": "Completed",
+    "location": "Details to be added",
+    "description": "Completed software delivery internship mentioned in the main profile. Full responsibilities, company name, and media will be added later.",
+    "responsibilities": [
+      "Gained exposure to software delivery workflows.",
+      "Practiced communication and coordination around software work.",
+      "Detailed description will be added when available."
+    ],
+    "technologies": ["Software Delivery", "Workflow", "Documentation"],
+    "skills": ["Communication", "Coordination", "Delivery Process"],
+    "status": "Completed",
+    "website": ""
   }
 ]
