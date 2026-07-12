@@ -1,0 +1,48 @@
+{
+  "name": "Youssef Adly",
+  "title": "Computer Engineering Student",
+  "subtitle": "Backend Development | Embedded Systems | Cybersecurity",
+  "introduction": "Computer Engineering student building reliable software across backend systems, embedded platforms, and security-focused applications.",
+  "location": "Cairo, Egypt",
+  "currentUniversity": "Faculty of Engineering",
+  "degree": "B.Sc. Computer Engineering",
+  "interests": ["Backend Architecture", "Embedded Systems", "Cybersecurity", "Distributed Systems"],
+  "futureGoals": "Grow into a software engineer who can design dependable systems, work across the stack when needed, and contribute to teams shipping production-quality products.",
+  "journey": [
+    {
+      "title": "High School",
+      "subtitle": "First serious exposure to engineering thinking",
+      "description": "Early technical curiosity became more structured through math, electronics, and problem solving."
+    },
+    {
+      "title": "Choosing Computer Engineering",
+      "subtitle": "A path between hardware and software",
+      "description": "Computer Engineering offered the right blend of systems, programming, digital logic, and practical design."
+    },
+    {
+      "title": "University",
+      "subtitle": "Building fundamentals through demanding coursework",
+      "description": "Coursework in data structures, databases, operating systems, computer architecture, embedded systems, and networks shaped a systems-oriented engineering mindset."
+    },
+    {
+      "title": "Projects",
+      "subtitle": "Turning theory into shipped artifacts",
+      "description": "Personal and university projects became the main place to practice clean architecture, documentation, testing habits, and user-focused decisions."
+    },
+    {
+      "title": "Internships",
+      "subtitle": "Learning professional delivery",
+      "description": "Internship work added exposure to team workflows, production constraints, code review, debugging, and communication."
+    },
+    {
+      "title": "Current Interests",
+      "subtitle": "Reliable software at system boundaries",
+      "description": "Current focus areas include backend APIs, database design, Linux-based systems, security fundamentals, and embedded software."
+    },
+    {
+      "title": "Future Goals",
+      "subtitle": "Engineering maturity over shortcuts",
+      "description": "The goal is to contribute to engineering teams that value maintainable systems, thoughtful UX, and strong execution."
+    }
+  ]
+}

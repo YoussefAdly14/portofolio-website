@@ -1,0 +1,152 @@
+[
+  {
+    "id": "revive-digital-marketing-member",
+    "organization": "Revive GUC",
+    "position": "Digital Marketing Member",
+    "duration": "Oct 2025 - Present",
+    "location": "New Cairo, Egypt",
+    "description": "Created and edited digital marketing content for club campaigns and events.",
+    "responsibilities": [
+      "Edited and captured event media for club promotion.",
+      "Created digital campaigns to promote Revive GUC events.",
+      "Supported event communication through visual content."
+    ],
+    "skills": ["Digital Marketing", "Content Creation", "Event Media", "Campaigns"],
+    "images": []
+  },
+  {
+    "id": "guc-mun-vice-president",
+    "organization": "GUC MUN",
+    "position": "Vice President",
+    "duration": "Feb 2024 - Present",
+    "location": "New Cairo, Egypt",
+    "description": "Led large member groups and managed directors across delegate teams for a successful MUN year.",
+    "responsibilities": [
+      "Led 200+ members while developing teamwork and event readiness.",
+      "Trained and managed 8 directors responsible for over 100 delegates.",
+      "Strengthened leadership, communication, and organizational workflows."
+    ],
+    "skills": ["Leadership", "Team Management", "Communication", "Organization"],
+    "images": []
+  },
+  {
+    "id": "graduation-caps-gowns-usher",
+    "organization": "GUC Events Office",
+    "position": "Graduation Caps & Gowns Usher",
+    "duration": "Sep 2025 - Oct 2025",
+    "location": "New Cairo, Egypt",
+    "description": "Supported operations for the GUC graduation ceremony, one of Egypt's largest graduation events.",
+    "responsibilities": [
+      "Assisted in organizing graduation ceremony flow and operations.",
+      "Coordinated event logistics to support a smooth attendee experience.",
+      "Contributed to the success of a high-volume university event."
+    ],
+    "skills": ["Event Operations", "Logistics", "Coordination", "Ushering"],
+    "images": []
+  },
+  {
+    "id": "orientation-hr-usher",
+    "organization": "GUC Events Office",
+    "position": "Orientation HR Usher",
+    "duration": "Sep 2025",
+    "location": "New Cairo, Egypt",
+    "description": "Helped support orientation teams through HR coordination, bonding, and workshop planning.",
+    "responsibilities": [
+      "Supported team projects and communication during orientation.",
+      "Collaborated with the Seating Team to improve team bonding.",
+      "Designed workshop and activity ideas for multiple teams."
+    ],
+    "skills": ["HR Coordination", "Team Bonding", "Workshop Planning", "Communication"],
+    "images": []
+  },
+  {
+    "id": "tedxguc-vip-usher",
+    "organization": "TEDxGUC",
+    "position": "VIP Usher",
+    "duration": "Sep 2025",
+    "location": "New Cairo, Egypt",
+    "description": "Supported VIP guest flow and experience during TEDxGUC event operations.",
+    "responsibilities": [
+      "Assisted VIP guests throughout the event.",
+      "Supported team projects and communication.",
+      "Helped improve guest experience through attentive event support."
+    ],
+    "skills": ["Guest Relations", "Event Support", "Communication", "Ushering"],
+    "images": []
+  },
+  {
+    "id": "revive-hr-member",
+    "organization": "Revive GUC",
+    "position": "HR Member",
+    "duration": "Oct 2024 - Aug 2025",
+    "location": "New Cairo, Egypt",
+    "description": "Supported HR activities, team bonding, and cross-team coordination inside Revive GUC.",
+    "responsibilities": [
+      "Supported team projects and internal communication.",
+      "Collaborated with the Digital Marketing team to strengthen team bonding.",
+      "Planned workshops and activities for multiple teams."
+    ],
+    "skills": ["HR", "Teamwork", "Internal Communication", "Planning"],
+    "images": []
+  },
+  {
+    "id": "employment-fair-usher",
+    "organization": "GUC SCAD Office",
+    "position": "Employment Fair Usher",
+    "duration": "Apr 2025 - May 2025",
+    "location": "New Cairo, Egypt",
+    "description": "Supported exhibitors and logistics at a national career fair with more than 160 companies.",
+    "responsibilities": [
+      "Supported major exhibitors including Infinity Power, Halliburton, and Infomenia.",
+      "Managed logistics and communication for over 12 companies across two rows during shift gaps.",
+      "Coordinated with exhibitors including Infomenia, Halliburton, LEONI, and Kader and Associates Designs."
+    ],
+    "skills": ["Event Logistics", "Stakeholder Support", "Communication", "Initiative"],
+    "images": []
+  },
+  {
+    "id": "el-warsha-fundraising-member",
+    "organization": "GUC El Warsha",
+    "position": "Fundraising Member",
+    "duration": "Oct 2024 - Feb 2025",
+    "location": "New Cairo, Egypt",
+    "description": "Built sponsor relationships and helped secure partnerships to support club activities.",
+    "responsibilities": [
+      "Contacted and secured sponsorships from clothing, F&B, and automotive businesses.",
+      "Facilitated campus partnerships that improved brand visibility and club funding.",
+      "Built professional connections with business owners."
+    ],
+    "skills": ["Fundraising", "Sponsorships", "Partnerships", "Networking"],
+    "images": []
+  },
+  {
+    "id": "graduation-flow-usher",
+    "organization": "GUC Events Office",
+    "position": "Graduation Flow Usher",
+    "duration": "Sep 2024 - Oct 2024",
+    "location": "New Cairo, Egypt",
+    "description": "Assisted in organizing GUC graduation flow and event operations.",
+    "responsibilities": [
+      "Supported ceremony flow during one of Egypt's largest graduation events.",
+      "Coordinated logistics and helped maintain smooth operations.",
+      "Contributed to the overall success of the ceremony."
+    ],
+    "skills": ["Event Flow", "Operations", "Logistics", "Ushering"],
+    "images": []
+  },
+  {
+    "id": "ieee-marketing-pr-member",
+    "organization": "GUC IEEE",
+    "position": "Marketing & PR Member",
+    "duration": "Feb 2024 - Sep 2024",
+    "location": "New Cairo, Egypt",
+    "description": "Promoted IEEE events through marketing materials, posters, flyers, and edited event videos.",
+    "responsibilities": [
+      "Participated in IEEE event promotion and outreach.",
+      "Marketed events through posters and flyers.",
+      "Edited videos to promote IEEE events."
+    ],
+    "skills": ["Marketing", "Public Relations", "Video Editing", "Event Promotion"],
+    "images": []
+  }
+]

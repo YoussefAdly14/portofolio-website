@@ -1,0 +1,38 @@
+[
+  {
+    "id": "backend-engineering-intern",
+    "company": "NileTech Labs",
+    "logo": "/src/assets/logos/company-niletech.svg",
+    "position": "Backend Engineering Intern",
+    "duration": "Jul 2025 - Sep 2025",
+    "description": "Contributed to backend service development with a focus on API reliability, database modeling, and maintainable code.",
+    "responsibilities": [
+      "Developed REST API endpoints for internal service workflows.",
+      "Designed relational database schemas for feature data.",
+      "Improved validation and error handling across API routes.",
+      "Collaborated with engineers through code reviews and sprint planning."
+    ],
+    "technologies": ["Node.js", "Express", "PostgreSQL", "Prisma", "Docker", "Git"],
+    "skills": ["Backend Development", "Database Design", "Code Review", "Agile Development"],
+    "certificate": "",
+    "website": "https://example.com"
+  },
+  {
+    "id": "embedded-systems-intern",
+    "company": "Cairo Embedded Systems",
+    "logo": "/src/assets/logos/company-embedded.svg",
+    "position": "Embedded Software Intern",
+    "duration": "Aug 2024 - Sep 2024",
+    "description": "Worked on firmware exercises, hardware communication protocols, and debugging workflows for embedded devices.",
+    "responsibilities": [
+      "Implemented microcontroller routines using embedded C.",
+      "Tested UART and GPIO communication flows.",
+      "Documented debugging steps and hardware assumptions.",
+      "Supported integration checks for sensor-based prototypes."
+    ],
+    "technologies": ["Embedded C", "C", "UART", "GPIO", "Git"],
+    "skills": ["Firmware Basics", "Hardware Debugging", "Technical Documentation", "Problem Solving"],
+    "certificate": "",
+    "website": "https://example.com"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "group": "Languages",
+    "items": ["JavaScript", "Python", "Java", "C", "SQL"]
+  },
+  {
+    "group": "Backend",
+    "items": ["Node.js", "Express", "REST APIs", "PostgreSQL", "MongoDB", "Prisma"]
+  },
+  {
+    "group": "Frontend",
+    "items": ["React", "Vite", "Tailwind CSS", "Responsive UI", "Accessibility"]
+  },
+  {
+    "group": "Systems",
+    "items": ["Linux", "Embedded C", "UART", "GPIO", "Computer Architecture"]
+  },
+  {
+    "group": "Tools",
+    "items": ["Git", "GitHub", "Docker", "Postman", "VS Code"]
+  }
+]

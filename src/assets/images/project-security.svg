@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Security lab preview</title>
+  <desc id="desc">Security shield with terminal and network indicators.</desc>
+  <rect width="960" height="600" rx="36" fill="#09090B"/>
+  <path d="M480 92L704 168V302C704 430 606 500 480 532C354 500 256 430 256 302V168L480 92Z" fill="#111827" stroke="#2E2E36" stroke-width="8"/>
+  <path d="M480 158L624 208V306C624 388 562 438 480 462C398 438 336 388 336 306V208L480 158Z" fill="#18181B" stroke="#7C3AED" stroke-width="6"/>
+  <path d="M430 304L468 342L546 252" fill="none" stroke="#10B981" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="112" y="402" width="230" height="84" rx="18" fill="#18181B"/>
+  <rect x="618" y="124" width="230" height="84" rx="18" fill="#18181B"/>
+  <rect x="144" y="434" width="132" height="14" rx="7" fill="#A1A1AA"/>
+  <rect x="650" y="156" width="132" height="14" rx="7" fill="#A1A1AA"/>
+</svg>

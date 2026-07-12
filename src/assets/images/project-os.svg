@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Operating systems preview</title>
+  <desc id="desc">Process scheduler and memory blocks in an operating system simulator.</desc>
+  <rect width="960" height="600" rx="36" fill="#09090B"/>
+  <rect x="90" y="92" width="780" height="416" rx="28" fill="#111827" stroke="#2E2E36"/>
+  <rect x="136" y="144" width="250" height="312" rx="20" fill="#18181B"/>
+  <rect x="430" y="144" width="394" height="70" rx="20" fill="#18181B"/>
+  <rect x="430" y="244" width="394" height="70" rx="20" fill="#18181B"/>
+  <rect x="430" y="344" width="394" height="70" rx="20" fill="#18181B"/>
+  <rect x="170" y="180" width="80" height="36" rx="12" fill="#7C3AED"/>
+  <rect x="170" y="244" width="140" height="36" rx="12" fill="#6366F1"/>
+  <rect x="170" y="308" width="102" height="36" rx="12" fill="#10B981"/>
+  <path d="M386 300H430" stroke="#A1A1AA" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Home",
+    "href": "/"
+  },
+  {
+    "label": "About Me",
+    "href": "/about"
+  },
+  {
+    "label": "Projects",
+    "href": "/projects"
+  },
+  {
+    "label": "Internships",
+    "href": "/internships"
+  },
+  {
+    "label": "Extracurricular Activities",
+    "href": "/extracurricular"
+  },
+  {
+    "label": "Contact & CV",
+    "href": "/contact"
+  }
+]

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Embedded controller preview</title>
+  <desc id="desc">Embedded board with microcontroller and connected sensors.</desc>
+  <rect width="960" height="600" rx="36" fill="#09090B"/>
+  <rect x="180" y="110" width="600" height="380" rx="36" fill="#111827" stroke="#2E2E36" stroke-width="8"/>
+  <rect x="354" y="220" width="252" height="160" rx="20" fill="#18181B" stroke="#7C3AED" stroke-width="8"/>
+  <g fill="#6366F1">
+    <rect x="252" y="162" width="58" height="58" rx="12"/>
+    <rect x="650" y="162" width="58" height="58" rx="12"/>
+    <rect x="252" y="380" width="58" height="58" rx="12"/>
+    <rect x="650" y="380" width="58" height="58" rx="12"/>
+  </g>
+  <path d="M310 191H354M606 191H650M310 409H354M606 409H650" stroke="#A1A1AA" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="480" cy="300" r="36" fill="#10B981"/>
+</svg>

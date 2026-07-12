@@ -1,0 +1,47 @@
+{
+  "name": "portofolio-website",
+  "version": "1.0.0",
+  "description": "A responsive portfolio website built to showcase my journey as a Computer Engineering student, highlighting projects, internships, technical skills, and extracurricular activities in a simple and professional way.",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoussefAdly14/portofolio-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YoussefAdly14/portofolio-website/issues"
+  },
+  "homepage": "https://github.com/YoussefAdly14/portofolio-website#readme",
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "clsx": "^2.1.1",
+    "gsap": "^3.15.0",
+    "motion": "^12.42.2",
+    "ogl": "^1.0.11",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "^5.7.0",
+    "react-router-dom": "^7.18.1",
+    "vite": "^8.1.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "autoprefixer": "^10.5.2",
+    "eslint": "^10.6.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.17"
+  }
+}

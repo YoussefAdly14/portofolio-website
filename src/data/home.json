@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "eyebrow": "Software Engineering Portfolio",
+    "primaryAction": {
+      "label": "View Contact & CV",
+      "href": "/contact"
+    },
+    "secondaryAction": {
+      "label": "About Me",
+      "href": "/about"
+    }
+  },
+  "folderLinks": [
+    {
+      "id": "personal",
+      "label": "Personal Projects",
+      "description": "Independent builds, experiments, and product-minded software work.",
+      "href": "/projects/personal",
+      "color": "#6D5DF7",
+      "paperLabels": ["APIs", "Tools", "Labs"]
+    },
+    {
+      "id": "university",
+      "label": "University Projects",
+      "description": "Coursework projects across systems, data, architecture, and embedded software.",
+      "href": "/projects/university",
+      "color": "#F5B84B",
+      "paperLabels": ["Systems", "Data", "Hardware"]
+    }
+  ],
+  "previewSections": [
+    {
+      "id": "projects",
+      "eyebrow": "Selected Work",
+      "title": "Projects",
+      "summary": "Browse personal and university projects through focused pages that can grow as the real portfolio content is added.",
+      "href": "/projects",
+      "actionLabel": "Open projects"
+    },
+    {
+      "id": "internships",
+      "eyebrow": "Professional Practice",
+      "title": "Internships",
+      "summary": "A future timeline for company experience, responsibilities, technologies, and engineering outcomes.",
+      "href": "/internships",
+      "actionLabel": "View internships"
+    },
+    {
+      "id": "about",
+      "eyebrow": "Background",
+      "title": "About Me",
+      "summary": "A concise story of academic growth, technical interests, and the kind of engineer this portfolio represents.",
+      "href": "/about",
+      "actionLabel": "Read profile"
+    },
+    {
+      "id": "activities",
+      "eyebrow": "Beyond Coursework",
+      "title": "Extracurricular Activities",
+      "summary": "Leadership, volunteering, and campus activity experience presented with reusable content cards.",
+      "href": "/extracurricular",
+      "actionLabel": "View activities"
+    },
+    {
+      "id": "contact",
+      "eyebrow": "Recruiter Ready",
+      "title": "Contact & CV",
+      "summary": "A direct route to email, professional links, phone details, and the downloadable CV.",
+      "href": "/contact",
+      "actionLabel": "Get in touch"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Travel planner preview</title>
+  <desc id="desc">Trip planning board with map route and itinerary cards.</desc>
+  <rect width="960" height="600" rx="36" fill="#09090B"/>
+  <rect x="72" y="78" width="500" height="444" rx="28" fill="#111827" stroke="#2E2E36"/>
+  <path d="M140 420C220 260 320 360 380 212C430 88 508 164 520 124" fill="none" stroke="#6366F1" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="140" cy="420" r="22" fill="#7C3AED"/>
+  <circle cx="380" cy="212" r="22" fill="#10B981"/>
+  <circle cx="520" cy="124" r="22" fill="#F59E0B"/>
+  <rect x="624" y="116" width="232" height="92" rx="20" fill="#18181B"/>
+  <rect x="624" y="254" width="232" height="92" rx="20" fill="#18181B"/>
+  <rect x="624" y="392" width="232" height="92" rx="20" fill="#18181B"/>
+  <rect x="656" y="146" width="128" height="16" rx="8" fill="#FFFFFF"/>
+  <rect x="656" y="284" width="152" height="16" rx="8" fill="#FFFFFF"/>
+  <rect x="656" y="422" width="112" height="16" rx="8" fill="#FFFFFF"/>
+</svg>
