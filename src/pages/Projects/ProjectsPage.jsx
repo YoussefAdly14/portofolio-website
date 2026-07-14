@@ -138,6 +138,9 @@ function ProjectsPage() {
     const safePage = Math.min(Math.max(nextPage, 0), totalPages - 1);
     setPage(safePage);
     setOpenId(filteredProjects[safePage * PAGE_SIZE]?.id || '');
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    });
   };
 
   return (

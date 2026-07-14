@@ -34,21 +34,41 @@ const PillNav = ({
     '--nav-h': '42px'
   };
 
-  const renderNavItem = item => {
+  const handleLogoButtonClick = () => {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      setIsNavCollapsed(prev => !prev);
+      return;
+    }
+
+    setIsMobileMenuOpen(prev => !prev);
+  };
+
+  const renderNavItem = (item, variant = 'desktop') => {
     const isActive = activeHref === item.href;
-    const linkClasses = [
-      'relative inline-flex h-full items-center justify-center rounded-full px-5 text-[15px] font-bold uppercase leading-none',
-      'tracking-normal no-underline whitespace-nowrap transition-all duration-200 ease-out',
-      'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
-      isActive
-        ? 'bg-white text-ink shadow-[0_0_0_1px_rgba(255,255,255,0.72)]'
-        : 'bg-[var(--pill-bg)] text-[var(--pill-text)] hover:bg-white hover:text-[var(--hover-text)] hover:-translate-y-0.5'
-    ].join(' ');
+    const isMobile = variant === 'mobile';
+    const linkClasses = isMobile
+      ? [
+          'relative flex min-h-12 w-full items-center justify-between rounded-lg px-4 py-3 text-left text-sm font-bold uppercase leading-tight',
+          'tracking-normal no-underline transition-all duration-200 ease-out',
+          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
+          isActive
+            ? 'bg-white text-ink'
+            : 'bg-white/[0.07] text-white hover:bg-white/14'
+        ].join(' ')
+      : [
+          'relative inline-flex h-full items-center justify-center rounded-full px-5 text-[15px] font-bold uppercase leading-none',
+          'tracking-normal no-underline whitespace-nowrap transition-all duration-200 ease-out',
+          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
+          isActive
+            ? 'bg-white text-ink shadow-[0_0_0_1px_rgba(255,255,255,0.72)]'
+            : 'bg-[var(--pill-bg)] text-[var(--pill-text)] hover:bg-white hover:text-[var(--hover-text)] hover:-translate-y-0.5'
+        ].join(' ');
 
     const content = (
       <>
         <span>{item.label}</span>
-        {isActive && (
+        {isMobile && <span className="text-base leading-none opacity-60" aria-hidden="true">/</span>}
+        {!isMobile && isActive && (
           <span
             className="absolute left-1/2 -bottom-[8px] h-3 w-3 -translate-x-1/2 rounded-full bg-white"
             aria-hidden="true"
@@ -87,7 +107,7 @@ const PillNav = ({
   };
 
   return (
-    <div className="absolute left-0 top-4 z-[1000] w-full md:w-auto md:left-4">
+    <div className="absolute left-0 top-[max(1rem,env(safe-area-inset-top))] z-[1000] w-full md:w-auto md:left-4">
       <nav
         className={`box-border flex w-full items-start justify-between gap-2 px-4 md:w-max md:justify-start md:px-0 ${className}`}
         aria-label="Primary"
@@ -95,9 +115,9 @@ const PillNav = ({
       >
         <button
           type="button"
-          aria-label={isNavCollapsed ? 'Expand navigation sections' : 'Minimize navigation sections'}
-          aria-expanded={!isNavCollapsed}
-          onClick={() => setIsNavCollapsed(prev => !prev)}
+          aria-label={isMobileMenuOpen || !isNavCollapsed ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMobileMenuOpen || !isNavCollapsed}
+          onClick={handleLogoButtonClick}
           className="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full border-0 bg-[var(--base)] p-2 transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           style={{ width: 'var(--nav-h)', height: 'var(--nav-h)' }}
         >
@@ -119,24 +139,14 @@ const PillNav = ({
           </div>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setIsMobileMenuOpen(prev => !prev)}
-          aria-label="Toggle menu"
-          aria-expanded={isMobileMenuOpen}
-          className="relative inline-flex h-[var(--nav-h)] w-[var(--nav-h)] shrink-0 flex-col items-center justify-center gap-1 rounded-full border-0 bg-[var(--base)] p-0 md:hidden"
-        >
-          <span className="h-0.5 w-4 rounded bg-[var(--pill-bg)]" />
-          <span className="h-0.5 w-4 rounded bg-[var(--pill-bg)]" />
-        </button>
       </nav>
 
       {isMobileMenuOpen && (
         <div
-          className="absolute left-4 right-4 top-14 z-[998] rounded-[22px] bg-white p-[3px] shadow-[0_18px_48px_rgba(0,0,0,0.24)] md:hidden"
+          className="fixed left-4 right-4 top-[calc(max(1rem,env(safe-area-inset-top))+3.5rem)] z-[998] max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-lg border border-white/12 bg-ink/95 p-2 shadow-[0_18px_48px_rgba(0,0,0,0.38)] backdrop-blur-xl md:hidden"
           style={cssVars}
         >
-          <div className="flex flex-col gap-[3px]">{items.map(renderNavItem)}</div>
+          <div className="flex flex-col gap-2">{items.map(item => renderNavItem(item, 'mobile'))}</div>
         </div>
       )}
     </div>

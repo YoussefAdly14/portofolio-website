@@ -84,7 +84,7 @@ function HomePage() {
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-white">
       <section
-        className="relative isolate flex min-h-screen items-center px-5 pb-14 pt-28 sm:px-8 lg:px-12"
+        className="relative isolate flex min-h-screen items-start px-5 pb-14 pt-32 sm:items-center sm:px-8 sm:pt-28 lg:px-12"
         aria-labelledby="home-title"
       >
         <div className="absolute inset-0 -z-20 bg-ink">
@@ -105,37 +105,37 @@ function HomePage() {
         </div>
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_42%,rgba(255,255,255,0.045),transparent_30%),linear-gradient(180deg,rgba(9,9,11,0.02),rgba(9,9,11,0.45)_64%,#09090b_100%)]" />
 
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1.03fr_0.97fr]">
-          <div className="max-w-2xl space-y-7">
+        <div className="mx-auto grid w-full max-w-6xl items-center gap-9 lg:grid-cols-[1.03fr_0.97fr]">
+          <div className="max-w-2xl space-y-6 sm:space-y-7">
             <div className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-200/80">{home.hero.eyebrow}</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80 sm:text-xs sm:tracking-[0.26em]">{home.hero.eyebrow}</p>
               <div className="space-y-3">
-                <h1 id="home-title" className="text-balance text-5xl font-semibold leading-[1.03] text-white sm:text-6xl lg:text-7xl">
+                <h1 id="home-title" className="text-balance text-[clamp(3rem,14vw,4rem)] font-semibold leading-[1.03] text-white sm:text-6xl lg:text-7xl">
                   {profile.name}
                 </h1>
-                <p className="text-xl font-medium text-cyan-100 sm:text-2xl">{profile.title}</p>
-                <p className="max-w-xl text-base leading-8 text-slate-300">{profile.introduction}</p>
+                <p className="text-xl font-medium leading-snug text-cyan-100 sm:text-2xl">{profile.title}</p>
+                <p className="max-w-xl text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">{profile.introduction}</p>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="grid gap-3 min-[430px]:flex min-[430px]:flex-wrap">
               <Link
                 to={home.hero.primaryAction.href}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
               >
                 {home.hero.primaryAction.label}
                 <FaDownload aria-hidden="true" className="text-xs" />
               </Link>
               <Link
                 to={home.hero.secondaryAction.href}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/12"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/12"
               >
                 {home.hero.secondaryAction.label}
                 <FaArrowRight aria-hidden="true" className="text-xs" />
               </Link>
             </div>
 
-            <dl className="grid max-w-2xl grid-cols-1 gap-3 text-sm text-slate-300 sm:grid-cols-3">
+            <dl className="grid max-w-2xl grid-cols-1 gap-4 text-sm text-slate-300 sm:grid-cols-3">
               <div className="border-l border-white/15 pl-4">
                 <dt className="font-semibold text-white">{profile.degree}</dt>
                 <dd>{profile.currentUniversity}</dd>

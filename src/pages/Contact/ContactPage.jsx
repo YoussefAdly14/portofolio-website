@@ -5,11 +5,13 @@ import contact from '../../data/contact.json';
 import profile from '../../data/profile.json';
 import resumePdf from '../../assets/resume/Youssef-Adly-CV.pdf';
 
+const emailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contact.email)}`;
+
 const primaryActions = [
   {
     label: 'Email',
     value: contact.email,
-    href: `mailto:${contact.email}`,
+    href: emailHref,
     icon: FaEnvelope
   },
   {
@@ -59,7 +61,7 @@ function ContactLinkCard({ item, compact = false }) {
         compact ? 'p-4' : 'p-4 sm:p-5'
       }`}
     >
-      <div className={`flex min-w-0 items-center ${compact ? 'gap-3' : 'gap-4'}`}>
+      <div className={`flex min-w-0 items-start ${compact ? 'gap-3' : 'gap-4'}`}>
         <span className={`${compact ? 'h-10 w-10' : 'h-11 w-11'} grid shrink-0 place-items-center rounded-full bg-white text-ink transition group-hover:bg-cyan-100`}>
           <Icon aria-hidden="true" />
         </span>
@@ -67,7 +69,7 @@ function ContactLinkCard({ item, compact = false }) {
           <span className={`${compact ? 'text-[11px]' : 'text-xs sm:text-sm'} block font-semibold uppercase tracking-[0.16em] text-cyan-100/80`}>
             {item.label}
           </span>
-          <span className={`${compact ? 'text-sm' : 'text-base'} block max-w-full overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-white`}>
+          <span className={`${compact ? 'text-sm' : 'text-base'} block max-w-full break-words font-semibold leading-6 text-white`}>
             {item.value}
           </span>
         </span>
@@ -115,7 +117,9 @@ function ContactPage() {
               <FaDownload aria-hidden="true" className="text-xs" />
             </a>
             <a
-              href={`mailto:${contact.email}`}
+              href={emailHref}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/12"
             >
               Send email
