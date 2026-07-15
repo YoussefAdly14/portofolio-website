@@ -108,18 +108,18 @@
       "Implemented authentication, automated payroll calculations, performance tracking, and frontend-backend validation."
     ],
     "technologies": ["ASP.NET", "SQL Server", "C#", "Database Design"],
-    "image": "/media/projects/project-database.svg",
+    "image": "/media/projects/hr-management-system.png",
     "media": {
       "type": "image",
-      "src": "/media/projects/project-database.svg",
-      "alt": "HR management database project illustration"
+      "src": "/media/projects/hr-management-system.png",
+      "alt": "HR Management System admin dashboard preview"
     },
     "github": "https://github.com/YoussefAdly14/DB3",
     "demo": "",
     "featured": true,
     "date": "Sep 2025 - Jan 2026",
     "status": "Completed",
-    "mediaNote": "Fallback visual used because the ASP.NET Web Forms app needs a SQL Server/IIS-style runtime."
+    "mediaNote": "Captured from the DB3 ASP.NET Web Forms dashboard styling with representative HR data; full runtime requires IIS/Visual Studio Web Application targets and SQL Server LocalDB."
   },
   {
     "id": "operating-system-simulator",
