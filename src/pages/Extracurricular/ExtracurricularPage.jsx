@@ -1,12 +1,75 @@
 import { useMemo, useState } from 'react';
-import { FaArrowLeft, FaArrowRight, FaChevronDown, FaImages } from 'react-icons/fa6';
+import { FaArrowLeft, FaArrowRight, FaChevronDown, FaChevronLeft, FaChevronRight, FaImages } from 'react-icons/fa6';
 import SideRays from '../../backgrounds/SideRays.jsx';
 import BorderGlow from '../../components/ui/BorderGlow.jsx';
 import activities from '../../data/activities.json';
 
 const PAGE_SIZE = 5;
 
+function ActivityCarousel({ activity }) {
+  const [index, setIndex] = useState(0);
+  const images = activity.images || [];
+  const currentImage = images[index];
+  const hasMultipleImages = images.length > 1;
+
+  const goToImage = nextIndex => {
+    setIndex((nextIndex + images.length) % images.length);
+  };
+
+  if (!currentImage) return null;
+
+  return (
+    <figure className="overflow-hidden rounded-lg border border-white/10 bg-black/35">
+      <div className="relative">
+        <img
+          src={currentImage.src}
+          alt={currentImage.alt || `${activity.position} photo`}
+          className="aspect-[4/3] w-full object-cover transition duration-300"
+        />
+
+        {hasMultipleImages && (
+          <>
+            <button
+              type="button"
+              onClick={() => goToImage(index - 1)}
+              aria-label="Previous activity photo"
+              className="absolute left-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/45 text-white shadow-lg backdrop-blur transition hover:bg-black/70"
+            >
+              <FaChevronLeft aria-hidden="true" className="text-xs" />
+            </button>
+            <button
+              type="button"
+              onClick={() => goToImage(index + 1)}
+              aria-label="Next activity photo"
+              className="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/45 text-white shadow-lg backdrop-blur transition hover:bg-black/70"
+            >
+              <FaChevronRight aria-hidden="true" className="text-xs" />
+            </button>
+          </>
+        )}
+      </div>
+
+      {hasMultipleImages && (
+        <div className="flex items-center justify-center gap-2 border-t border-white/10 bg-black/30 px-4 py-3">
+          {images.map((image, dotIndex) => (
+            <button
+              key={image.src}
+              type="button"
+              onClick={() => goToImage(dotIndex)}
+              aria-label={`Show activity photo ${dotIndex + 1}`}
+              aria-current={dotIndex === index}
+              className={`h-2 rounded-full transition-all ${dotIndex === index ? 'w-7 bg-cyan-200' : 'w-2 bg-white/35 hover:bg-white/60'}`}
+            />
+          ))}
+        </div>
+      )}
+    </figure>
+  );
+}
+
 function ExperienceAccordion({ activity, isOpen, onToggle }) {
+  const hasImages = activity.images?.length > 0;
+
   return (
     <BorderGlow
       className="overflow-hidden"
@@ -68,13 +131,17 @@ function ExperienceAccordion({ activity, isOpen, onToggle }) {
                   </div>
                 </div>
 
-                <div className="rounded-lg border border-dashed border-white/15 bg-white/[0.03] p-4 text-sm leading-7 text-slate-300">
-                  <div className="mb-2 flex items-center gap-2 font-semibold text-white">
-                    <FaImages aria-hidden="true" className="text-cyan-100" />
-                    Photos coming later
+                {hasImages ? (
+                  <ActivityCarousel activity={activity} />
+                ) : (
+                  <div className="rounded-lg border border-dashed border-white/15 bg-white/[0.03] p-4 text-sm leading-7 text-slate-300">
+                    <div className="mb-2 flex items-center gap-2 font-semibold text-white">
+                      <FaImages aria-hidden="true" className="text-cyan-100" />
+                      Photos coming later
+                    </div>
+                    This experience is ready for images when you send them. The gallery area is reserved so each activity can grow without redesigning the page.
                   </div>
-                  This experience is ready for images when you send them. The gallery area is reserved so each activity can grow without redesigning the page.
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -125,7 +192,7 @@ function ExtracurricularPage() {
               Leadership, events, and campus work.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-300">
-              A dated collection of club and university experiences. Each item expands into responsibilities, skills, and a reserved photo area for future images.
+              A dated collection of club and university experiences. Each item expands into responsibilities, skills, and captured media from the moments behind the work.
             </p>
           </div>
 

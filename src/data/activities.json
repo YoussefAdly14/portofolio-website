@@ -12,7 +12,12 @@
       "Supported event communication through visual content."
     ],
     "skills": ["Digital Marketing", "Content Creation", "Event Media", "Campaigns"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/digital-marketing-member.jpg",
+        "alt": "Revive GUC digital marketing team gathering at a campus event"
+      }
+    ]
   },
   {
     "id": "guc-mun-vice-president",
@@ -27,7 +32,28 @@
       "Strengthened leadership, communication, and organizational workflows."
     ],
     "skills": ["Leadership", "Team Management", "Communication", "Organization"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/vice-president-mun.jpg",
+        "alt": "GUC MUN vice president role moment with committee members in a classroom"
+      },
+      {
+        "src": "/media/activities/mun-2.jpg",
+        "alt": "GUC MUN team gathering"
+      },
+      {
+        "src": "/media/activities/mun-3.jpg",
+        "alt": "GUC MUN group photo outdoors on campus"
+      },
+      {
+        "src": "/media/activities/mun-4.jpg",
+        "alt": "GUC MUN group photo during an indoor event"
+      },
+      {
+        "src": "/media/activities/mun-5.jpg",
+        "alt": "GUC MUN group photo outdoors at night"
+      }
+    ]
   },
   {
     "id": "graduation-caps-gowns-usher",

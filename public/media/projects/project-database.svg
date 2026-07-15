@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Database engine preview</title>
+  <desc id="desc">Layered database storage cylinders with query panels.</desc>
+  <rect width="960" height="600" rx="36" fill="#09090B"/>
+  <ellipse cx="480" cy="172" rx="210" ry="64" fill="#18181B" stroke="#6366F1" stroke-width="8"/>
+  <path d="M270 172V410C270 446 364 476 480 476C596 476 690 446 690 410V172" fill="#111827" stroke="#2E2E36" stroke-width="8"/>
+  <ellipse cx="480" cy="410" rx="210" ry="64" fill="#18181B" stroke="#2E2E36" stroke-width="8"/>
+  <path d="M282 252C314 288 397 308 480 308C563 308 646 288 678 252" fill="none" stroke="#7C3AED" stroke-width="8"/>
+  <path d="M282 332C314 368 397 388 480 388C563 388 646 368 678 332" fill="none" stroke="#6366F1" stroke-width="8"/>
+  <rect x="128" y="130" width="150" height="70" rx="18" fill="#18181B"/>
+  <rect x="682" y="400" width="150" height="70" rx="18" fill="#18181B"/>
+</svg>

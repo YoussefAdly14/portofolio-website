@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Backend API preview</title>
+  <desc id="desc">API service diagram with connected nodes and database layers.</desc>
+  <rect width="960" height="600" rx="36" fill="#09090B"/>
+  <rect x="112" y="106" width="250" height="124" rx="24" fill="#18181B" stroke="#2E2E36"/>
+  <rect x="598" y="106" width="250" height="124" rx="24" fill="#18181B" stroke="#2E2E36"/>
+  <rect x="355" y="252" width="250" height="124" rx="24" fill="#18181B" stroke="#7C3AED"/>
+  <rect x="112" y="398" width="250" height="96" rx="24" fill="#18181B" stroke="#2E2E36"/>
+  <rect x="598" y="398" width="250" height="96" rx="24" fill="#18181B" stroke="#2E2E36"/>
+  <path d="M362 168H598M480 252V230M355 314H237V398M605 314H723V398" stroke="#6366F1" stroke-width="10" stroke-linecap="round"/>
+  <rect x="154" y="150" width="120" height="16" rx="8" fill="#FFFFFF"/>
+  <rect x="640" y="150" width="108" height="16" rx="8" fill="#FFFFFF"/>
+  <rect x="397" y="296" width="144" height="16" rx="8" fill="#FFFFFF"/>
+  <rect x="154" y="436" width="112" height="16" rx="8" fill="#A1A1AA"/>
+  <rect x="640" y="436" width="112" height="16" rx="8" fill="#A1A1AA"/>
+</svg>

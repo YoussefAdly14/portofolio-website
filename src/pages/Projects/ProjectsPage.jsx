@@ -1,11 +1,30 @@
 import { useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { FaArrowLeft, FaArrowRight, FaChevronDown, FaGithub, FaPlay } from 'react-icons/fa6';
+import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaChevronDown, FaGithub, FaPlay } from 'react-icons/fa6';
 import SideRays from '../../backgrounds/SideRays.jsx';
 import BorderGlow from '../../components/ui/BorderGlow.jsx';
 import projects from '../../data/projects.json';
 
 const PAGE_SIZE = 5;
+
+const MONTH_INDEX = {
+  jan: 0,
+  feb: 1,
+  mar: 2,
+  apr: 3,
+  may: 4,
+  jun: 5,
+  jul: 6,
+  aug: 7,
+  sep: 8,
+  oct: 9,
+  nov: 10,
+  dec: 11,
+  spring: 4,
+  summer: 7,
+  fall: 10,
+  winter: 11,
+};
 
 function getInitialFilter(pathname) {
   if (pathname.endsWith('/personal')) return 'Personal';
@@ -13,7 +32,27 @@ function getInitialFilter(pathname) {
   return 'All';
 }
 
+function getProjectDateValue(date = '') {
+  const matches = [...date.matchAll(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|Spring|Summer|Fall|Winter)?\s*(\d{4})/gi)];
+  const latest = matches.at(-1);
+
+  if (!latest) return 0;
+
+  const month = latest[1] ? MONTH_INDEX[latest[1].toLowerCase()] : 11;
+  return new Date(Number(latest[2]), month, 1).getTime();
+}
+
+const orderedProjects = projects
+  .map((project, index) => ({ project, index }))
+  .sort((a, b) => {
+    const dateDelta = getProjectDateValue(b.project.date) - getProjectDateValue(a.project.date);
+    return dateDelta || a.index - b.index;
+  })
+  .map(({ project }) => project);
+
 function ProjectAccordion({ project, isOpen, onToggle }) {
+  const media = project.media;
+
   return (
     <BorderGlow
       className="overflow-hidden"
@@ -75,35 +114,68 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
                   ))}
                 </div>
 
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
-                  >
-                    View GitHub
-                    <FaGithub aria-hidden="true" className="text-sm" />
-                  </a>
-                )}
+                <div className="flex flex-wrap gap-3">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
+                    >
+                      View GitHub
+                      <FaGithub aria-hidden="true" className="text-sm" />
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-cyan-100/40 bg-cyan-100/10 px-4 py-2 text-sm font-bold text-cyan-50 transition hover:-translate-y-0.5 hover:border-cyan-100 hover:bg-cyan-100/20"
+                    >
+                      Live Demo
+                      <FaArrowUpRightFromSquare aria-hidden="true" className="text-xs" />
+                    </a>
+                  )}
+                </div>
               </div>
 
-              <div className="overflow-hidden rounded-lg border border-white/10 bg-black/30">
+              <div className="overflow-hidden rounded-lg border border-white/10 bg-black/40">
                 <div className="relative aspect-video">
-                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(103,232,249,0.16),transparent_38%),linear-gradient(315deg,rgba(245,184,75,0.12),transparent_42%)]" />
-                  <div className="absolute inset-x-0 top-0 h-px bg-white/25" />
-                  <div className="absolute inset-0 grid place-items-center p-6 text-center">
-                    <div className="space-y-3">
-                      <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-white text-ink">
-                        <FaPlay aria-hidden="true" className="ml-0.5 text-sm" />
-                      </span>
-                      <div>
-                        <p className="font-semibold text-white">Project media slot</p>
-                        <p className="mt-1 text-sm leading-6 text-slate-300">{project.mediaNote}</p>
+                  {media?.type === 'video' ? (
+                    <video
+                      src={media.src}
+                      poster={media.poster}
+                      className="h-full w-full object-cover"
+                      controls
+                      muted
+                      playsInline
+                      preload="metadata"
+                      aria-label={media.alt}
+                    />
+                  ) : media?.src ? (
+                    <img src={media.src} alt={media.alt || `${project.title} preview`} className="h-full w-full object-cover" />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(103,232,249,0.16),transparent_38%),linear-gradient(315deg,rgba(245,184,75,0.12),transparent_42%)]" />
+                      <div className="absolute inset-x-0 top-0 h-px bg-white/25" />
+                      <div className="absolute inset-0 grid place-items-center p-6 text-center">
+                        <div className="space-y-3">
+                          <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-white text-ink">
+                            <FaPlay aria-hidden="true" className="ml-0.5 text-sm" />
+                          </span>
+                          <div>
+                            <p className="font-semibold text-white">Project media slot</p>
+                            <p className="mt-1 text-sm leading-6 text-slate-300">{project.mediaNote}</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    </>
+                  )}
                 </div>
+                {project.mediaNote && (
+                  <p className="border-t border-white/10 px-4 py-3 text-xs leading-5 text-slate-300">{project.mediaNote}</p>
+                )}
               </div>
             </div>
           </div>
@@ -117,18 +189,18 @@ function ProjectsPage() {
   const { pathname } = useLocation();
   const [filter, setFilter] = useState(getInitialFilter(pathname));
   const [page, setPage] = useState(0);
-  const [openId, setOpenId] = useState(projects[0]?.id);
+  const [openId, setOpenId] = useState(orderedProjects[0]?.id);
 
   const filteredProjects = useMemo(() => {
-    if (filter === 'All') return projects;
-    return projects.filter(project => project.category === filter);
+    if (filter === 'All') return orderedProjects;
+    return orderedProjects.filter(project => project.category === filter);
   }, [filter]);
 
   const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PAGE_SIZE));
   const visibleProjects = filteredProjects.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
   const changeFilter = nextFilter => {
-    const nextProjects = nextFilter === 'All' ? projects : projects.filter(project => project.category === nextFilter);
+    const nextProjects = nextFilter === 'All' ? orderedProjects : orderedProjects.filter(project => project.category === nextFilter);
     setFilter(nextFilter);
     setPage(0);
     setOpenId(nextProjects[0]?.id || '');
@@ -158,7 +230,7 @@ function ProjectsPage() {
               Work built across backend, systems, databases, and the web.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-300">
-              A paginated project collection sourced from my CV, GitHub repositories, and this portfolio build. Each project has room for a future demo video or media preview.
+              A paginated project collection sourced from my CV, GitHub repositories, and this portfolio build, with captured screenshots and demo media where each project can run locally.
             </p>
           </div>
 

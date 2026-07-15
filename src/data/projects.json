@@ -10,32 +10,68 @@
       "Designed dedicated pages for About, Contact & CV, Extracurricular Activities, and future project/internship expansion."
     ],
     "technologies": ["React", "Vite", "Tailwind CSS", "React Router", "ReactBits"],
-    "image": "/src/assets/images/project-portfolio.svg",
+    "image": "/media/projects/portfolio-website.png",
+    "media": {
+      "type": "video",
+      "src": "/media/projects/portfolio-website-demo.webm",
+      "poster": "/media/projects/portfolio-website.png",
+      "alt": "Portfolio website homepage walkthrough"
+    },
     "github": "https://github.com/YoussefAdly14/portofolio-website",
     "demo": "",
     "featured": true,
     "date": "2026",
     "status": "In Progress",
-    "mediaNote": "Space reserved for a homepage walkthrough video."
+    "mediaNote": "Captured homepage and project-section walkthrough."
   },
   {
     "id": "foodics-ordering-backend",
-    "title": "Online Food Ordering Backend System",
+    "title": "Foolics API",
     "category": "Personal",
-    "description": "A Node.js backend for an online food ordering and e-commerce application developed during the Foodics backend internship.",
+    "description": "A Foodics internship backend API for an online ordering system, built to support a separate frontend team with documented auth, cart, order, stock, and admin workflows.",
     "details": [
-      "Developed RESTful APIs with role-based authentication for users and admins.",
-      "Integrated PostgreSQL with Prisma ORM to manage users, products, carts, and orders.",
-      "Implemented cart-to-order lifecycle, asynchronous backend logic, Jest unit tests, Docker setup, and Postman API validation."
+      "Developed Express REST APIs for user registration/login, product lookup, cart management, order creation, admin dashboard data, stock updates, and order-status transitions.",
+      "Integrated PostgreSQL with Prisma models for users, carts, cart items, products, orders, and order items, with JWT authentication and admin authorization middleware.",
+      "Documented the API with Swagger UI, added Jest and Supertest coverage for the core endpoints, and provided Docker setup for local handoff to the frontend team."
     ],
-    "technologies": ["Node.js", "PostgreSQL", "Prisma", "Docker", "Jest", "Postman"],
-    "image": "/src/assets/images/project-api.svg",
-    "github": "https://github.com/YoussefAdly14/FoodicsFolks-foolics-api",
+    "technologies": ["Node.js", "Express", "PostgreSQL", "Prisma", "JWT", "Swagger UI", "Jest", "Docker"],
+    "image": "/media/projects/foolics-api-dashboard.png",
+    "media": {
+      "type": "image",
+      "src": "/media/projects/foolics-api-dashboard.png",
+      "alt": "Foolics API architecture and endpoint overview"
+    },
+    "github": "https://github.com/FoodicsFolks/foolics-api",
     "demo": "",
     "featured": true,
     "date": "Jul 2025 - Sep 2025",
     "status": "Completed",
-    "mediaNote": "Backend architecture/demo video can be added later."
+    "mediaNote": "Custom API overview image used because the frontend that consumed this backend is not currently available."
+  },
+  {
+    "id": "foodics-internship-frontend",
+    "title": "Foolix Foodics Frontend Internship App",
+    "category": "Personal",
+    "description": "A deployed Vue 3 ordering app for Foolix with role-based cashier POS and operations dashboard experiences built during the Foodics frontend internship.",
+    "details": [
+      "Built one Vite and Vue 3 codebase for cashier and admin workflows, with login-gated role-based routing.",
+      "Implemented a shared API client, Pinia state management, menu browsing, cart and checkout flows, dashboard orders board, and menu management screens.",
+      "Deployed on Vercel at https://foodics-internship-2026-fe.vercel.app with history-mode route rewrites for direct links and refreshes."
+    ],
+    "technologies": ["Vue 3", "Vite", "Pinia", "Vue Router", "Tailwind CSS", "Vitest"],
+    "image": "/media/projects/foolix-foodics-frontend.png",
+    "media": {
+      "type": "video",
+      "src": "/media/projects/foolix-foodics-frontend-demo.webm",
+      "poster": "/media/projects/foolix-foodics-frontend.png",
+      "alt": "Foolix Foodics frontend admin dashboard walkthrough"
+    },
+    "github": "https://github.com/nasserahmed009/foodics-internship-2026-FE",
+    "demo": "https://foodics-internship-2026-fe.vercel.app",
+    "featured": true,
+    "date": "2026",
+    "status": "Deployed",
+    "mediaNote": "Captured from the deployed Foolix admin dashboard on Vercel."
   },
   {
     "id": "travel-web-application",
@@ -48,13 +84,18 @@
       "Designed MongoDB CRUD operations, duplicate validation, destination pages, want-to-go lists, and substring-based search."
     ],
     "technologies": ["Node.js", "Express.js", "MongoDB", "EJS", "JavaScript"],
-    "image": "/src/assets/images/project-travel.svg",
+    "image": "/media/projects/travel-web-application.png",
+    "media": {
+      "type": "image",
+      "src": "/media/projects/travel-web-application.png",
+      "alt": "Travel web application registration screen"
+    },
     "github": "https://github.com/YoussefAdly14/Travel",
     "demo": "",
     "featured": true,
     "date": "Sep 2025 - Jan 2026",
     "status": "Completed",
-    "mediaNote": "Future slot for a user-flow demo."
+    "mediaNote": "Captured locally; authenticated flow requires a MongoDB connection string."
   },
   {
     "id": "hr-management-system",
@@ -67,13 +108,18 @@
       "Implemented authentication, automated payroll calculations, performance tracking, and frontend-backend validation."
     ],
     "technologies": ["ASP.NET", "SQL Server", "C#", "Database Design"],
-    "image": "/src/assets/images/project-database.svg",
+    "image": "/media/projects/project-database.svg",
+    "media": {
+      "type": "image",
+      "src": "/media/projects/project-database.svg",
+      "alt": "HR management database project illustration"
+    },
     "github": "https://github.com/YoussefAdly14/DB3",
     "demo": "",
     "featured": true,
     "date": "Sep 2025 - Jan 2026",
     "status": "Completed",
-    "mediaNote": "Reserved for dashboard screenshots or walkthrough video."
+    "mediaNote": "Fallback visual used because the ASP.NET Web Forms app needs a SQL Server/IIS-style runtime."
   },
   {
     "id": "operating-system-simulator",
@@ -86,13 +132,19 @@
       "Compared multiple process scheduling algorithms and simulated core OS behavior."
     ],
     "technologies": ["C", "Operating Systems", "Scheduling", "Memory Management"],
-    "image": "/src/assets/images/project-os.svg",
+    "image": "/media/projects/operating-system-simulator.png",
+    "media": {
+      "type": "video",
+      "src": "/media/projects/operating-system-simulator-demo.webm",
+      "poster": "/media/projects/operating-system-simulator.png",
+      "alt": "Operating system simulator demo"
+    },
     "github": "https://github.com/YoussefAdly14/Operating-System-Project-",
     "demo": "",
     "featured": true,
     "date": "2026",
     "status": "Completed",
-    "mediaNote": "Terminal/demo recording can be embedded later."
+    "mediaNote": "Captured from the local Kernel Studio dashboard."
   },
   {
     "id": "computer-architecture-processor",
@@ -105,50 +157,43 @@
       "Simulated processor behavior for the Double McHarvard package specification."
     ],
     "technologies": ["C", "Computer Architecture", "Pipelining", "ISA"],
-    "image": "/src/assets/images/project-architecture.svg",
+    "image": "/media/projects/computer-architecture-processor.png",
+    "media": {
+      "type": "video",
+      "src": "/media/projects/computer-architecture-processor-demo.webm",
+      "poster": "/media/projects/computer-architecture-processor.png",
+      "alt": "Computer architecture processor simulator demo"
+    },
     "github": "https://github.com/YoussefAdly14/Computer-Architecture-Project",
     "demo": "",
     "featured": false,
     "date": "2026",
     "status": "Completed",
-    "mediaNote": "Reserved for architecture diagram/video."
+    "mediaNote": "Captured from the local static processor GUI."
   },
   {
-    "id": "enhance-app",
-    "title": "Enhance",
+    "id": "special-folio",
+    "title": "Special Folio",
     "category": "Personal",
-    "description": "A personal gym, macro, and entertainment app concept from GitHub.",
+    "description": "A React portfolio platform for students, instructors, employers, and admins to showcase projects, manage portfolios, and connect around internships.",
     "details": [
-      "Created as a personal product experiment combining fitness and entertainment flows.",
-      "Structured as an app idea for tracking gym routines, macros, and user lifestyle preferences.",
-      "More implementation details and screenshots can be added later."
+      "Built a multi-role front-end prototype with authentication, protected routes, dashboards, portfolio browsing, course workflows, messaging, and notifications.",
+      "Implemented student, instructor, employer, and admin experiences using React Router, local state, dummy data, charts, and reusable layout components.",
+      "Captured a local walkthrough covering login, project browsing, and statistics screens."
     ],
-    "technologies": ["App Development", "Product Design"],
-    "image": "/src/assets/images/project-embedded.svg",
-    "github": "https://github.com/YoussefAdly14/Enhance",
+    "technologies": ["React", "Vite", "React Router", "Recharts", "Lucide React"],
+    "image": "/media/projects/the-special-ones.png",
+    "media": {
+      "type": "video",
+      "src": "/media/projects/the-special-ones-demo.webm",
+      "poster": "/media/projects/the-special-ones.png",
+      "alt": "Special Folio project platform walkthrough"
+    },
+    "github": "https://github.com/Software-Engineering-Spring-2026/The-special-ones",
     "demo": "",
-    "featured": false,
-    "date": "2026",
-    "status": "In Progress",
-    "mediaNote": "Reserved for app demo media."
-  },
-  {
-    "id": "database-engine-milestone",
-    "title": "Database 2 Milestone Project",
-    "category": "University",
-    "description": "A Java database coursework milestone project from GitHub.",
-    "details": [
-      "Built as part of database coursework at GUC.",
-      "Uses Java to practice backend/database concepts and milestone-based delivery.",
-      "More project details can be expanded when final documentation is added."
-    ],
-    "technologies": ["Java", "Databases", "Coursework"],
-    "image": "/src/assets/images/project-database.svg",
-    "github": "https://github.com/YoussefAdly14/Database-2-Milestone-1-Project",
-    "demo": "",
-    "featured": false,
-    "date": "2026",
+    "featured": true,
+    "date": "Spring 2026",
     "status": "Completed",
-    "mediaNote": "Reserved for diagrams or screenshots."
+    "mediaNote": "Captured from the local React/Vite app."
   }
 ]

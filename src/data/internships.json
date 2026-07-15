@@ -68,22 +68,5 @@
     "skills": ["Backend Development", "API Testing", "Team Workflow", "Async Programming"],
     "status": "Completed",
     "website": ""
-  },
-  {
-    "id": "software-delivery-internship",
-    "company": "Software Delivery Internship",
-    "position": "Software Delivery Intern",
-    "duration": "Completed",
-    "location": "Details to be added",
-    "description": "Completed software delivery internship mentioned in the main profile. Full responsibilities, company name, and media will be added later.",
-    "responsibilities": [
-      "Gained exposure to software delivery workflows.",
-      "Practiced communication and coordination around software work.",
-      "Detailed description will be added when available."
-    ],
-    "technologies": ["Software Delivery", "Workflow", "Documentation"],
-    "skills": ["Communication", "Coordination", "Delivery Process"],
-    "status": "Completed",
-    "website": ""
   }
 ]
