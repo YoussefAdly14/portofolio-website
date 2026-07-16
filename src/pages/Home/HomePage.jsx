@@ -5,6 +5,7 @@ import Galaxy from '../../backgrounds/Galaxy.jsx';
 import Folder from '../../components/ui/Folder.jsx';
 import TiltedCard from '../../components/ui/TiltedCard.jsx';
 import BorderGlow from '../../components/ui/BorderGlow.jsx';
+import RocketFlight from '../../components/effects/RocketFlight.jsx';
 import profilePhoto from '../../assets/images/youssef-adly-profile.jpeg';
 import home from '../../data/home.json';
 import profile from '../../data/profile.json';
@@ -82,7 +83,8 @@ function HomePage() {
   const featuredProjects = projects.filter(project => project.featured).slice(0, 3);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-ink text-white">
+    <main className="relative isolate min-h-screen overflow-hidden bg-ink text-white">
+      <RocketFlight />
       <section
         className="relative isolate flex min-h-screen items-start px-5 pb-14 pt-32 sm:items-center sm:px-8 sm:pt-28 lg:px-12"
         aria-labelledby="home-title"
@@ -105,7 +107,7 @@ function HomePage() {
         </div>
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_42%,rgba(255,255,255,0.045),transparent_30%),linear-gradient(180deg,rgba(9,9,11,0.02),rgba(9,9,11,0.45)_64%,#09090b_100%)]" />
 
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-9 lg:grid-cols-[1.03fr_0.97fr]">
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-9 lg:grid-cols-[1.03fr_0.97fr]">
           <div className="max-w-2xl space-y-6 sm:space-y-7">
             <div className="space-y-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80 sm:text-xs sm:tracking-[0.26em]">{home.hero.eyebrow}</p>
@@ -183,7 +185,7 @@ function HomePage() {
       <div className="relative bg-ink px-5 py-20 sm:px-8 lg:px-12">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,#09090b,rgba(9,9,11,0.96)_28%,#09090b)]" />
 
-        <div className="relative mx-auto space-y-24">
+        <div className="relative z-10 mx-auto space-y-24">
           <FadeSection>
             <SectionIntro
               eyebrow="Selected Work"
@@ -368,19 +370,6 @@ function HomePage() {
             </div>
           </FadeSection>
 
-          <FadeSection delay={160} className="pb-2">
-            <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-5 border-t border-white/10 pt-8 text-slate-300 sm:flex-row sm:items-center">
-              <p className="max-w-2xl text-sm leading-7">Want the shorter profile or direct contact details?</p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/about" className="text-sm font-semibold text-white underline-offset-4 transition hover:text-cyan-100 hover:underline">
-                  About me
-                </Link>
-                <Link to="/contact" className="text-sm font-semibold text-white underline-offset-4 transition hover:text-cyan-100 hover:underline">
-                  Contact & CV
-                </Link>
-              </div>
-            </div>
-          </FadeSection>
         </div>
       </div>
     </main>

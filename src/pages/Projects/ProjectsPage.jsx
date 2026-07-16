@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaChevronDown, FaGithub, FaPlay } from 'react-icons/fa6';
 import SideRays from '../../backgrounds/SideRays.jsx';
@@ -186,10 +186,37 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
 }
 
 function ProjectsPage() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const [filter, setFilter] = useState(getInitialFilter(pathname));
   const [page, setPage] = useState(0);
   const [openId, setOpenId] = useState(orderedProjects[0]?.id);
+
+  useEffect(() => {
+    const routeFilter = getInitialFilter(pathname);
+    const targetId = decodeURIComponent(hash.replace(/^#/, ''));
+
+    if (!targetId) {
+      setFilter(routeFilter);
+      setPage(0);
+      setOpenId((routeFilter === 'All' ? orderedProjects : orderedProjects.filter(project => project.category === routeFilter))[0]?.id || '');
+      return;
+    }
+
+    const targetProject = orderedProjects.find(project => project.id === targetId);
+    const nextFilter = routeFilter === 'All' || !targetProject ? routeFilter : targetProject.category;
+    const nextProjects = nextFilter === 'All' ? orderedProjects : orderedProjects.filter(project => project.category === nextFilter);
+    const targetIndex = nextProjects.findIndex(project => project.id === targetId);
+
+    setFilter(nextFilter);
+
+    if (targetIndex >= 0) {
+      setPage(Math.floor(targetIndex / PAGE_SIZE));
+      setOpenId(targetId);
+      window.setTimeout(() => {
+        document.getElementById(targetId)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }, 0);
+    }
+  }, [pathname, hash]);
 
   const filteredProjects = useMemo(() => {
     if (filter === 'All') return orderedProjects;
@@ -250,12 +277,13 @@ function ProjectsPage() {
 
         <div className="space-y-4">
           {visibleProjects.map(project => (
-            <ProjectAccordion
-              key={project.id}
-              project={project}
-              isOpen={openId === project.id}
-              onToggle={() => setOpenId(current => (current === project.id ? '' : project.id))}
-            />
+            <div key={project.id} id={project.id} className="scroll-mt-28">
+              <ProjectAccordion
+                project={project}
+                isOpen={openId === project.id}
+                onToggle={() => setOpenId(current => (current === project.id ? '' : project.id))}
+              />
+            </div>
           ))}
         </div>
 

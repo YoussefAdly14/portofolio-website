@@ -1,12 +1,76 @@
 import { useState } from 'react';
-import { FaArrowLeft, FaArrowRight, FaChevronDown, FaImages } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
+import { FaArrowLeft, FaArrowRight, FaChevronDown, FaChevronLeft, FaChevronRight, FaImages } from 'react-icons/fa6';
 import SideRays from '../../backgrounds/SideRays.jsx';
 import BorderGlow from '../../components/ui/BorderGlow.jsx';
 import internships from '../../data/internships.json';
 
 const PAGE_SIZE = 5;
 
+function InternshipCarousel({ internship }) {
+  const [index, setIndex] = useState(0);
+  const images = internship.images || [];
+  const currentImage = images[index];
+  const hasMultipleImages = images.length > 1;
+
+  const goToImage = nextIndex => {
+    setIndex((nextIndex + images.length) % images.length);
+  };
+
+  if (!currentImage) return null;
+
+  return (
+    <figure className="overflow-hidden rounded-lg border border-white/10 bg-black/35">
+      <div className="relative">
+        <img
+          src={currentImage.src}
+          alt={currentImage.alt || `${internship.company} internship photo`}
+          className="aspect-[4/3] w-full object-cover transition duration-300"
+        />
+
+        {hasMultipleImages && (
+          <>
+            <button
+              type="button"
+              onClick={() => goToImage(index - 1)}
+              aria-label="Previous internship photo"
+              className="absolute left-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/45 text-white shadow-lg backdrop-blur transition hover:bg-black/70"
+            >
+              <FaChevronLeft aria-hidden="true" className="text-xs" />
+            </button>
+            <button
+              type="button"
+              onClick={() => goToImage(index + 1)}
+              aria-label="Next internship photo"
+              className="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-black/45 text-white shadow-lg backdrop-blur transition hover:bg-black/70"
+            >
+              <FaChevronRight aria-hidden="true" className="text-xs" />
+            </button>
+          </>
+        )}
+      </div>
+
+      {hasMultipleImages && (
+        <div className="flex items-center justify-center gap-2 border-t border-white/10 bg-black/30 px-4 py-3">
+          {images.map((image, dotIndex) => (
+            <button
+              key={image.src}
+              type="button"
+              onClick={() => goToImage(dotIndex)}
+              aria-label={`Show internship photo ${dotIndex + 1}`}
+              aria-current={dotIndex === index}
+              className={`h-2 rounded-full transition-all ${dotIndex === index ? 'w-7 bg-cyan-200' : 'w-2 bg-white/35 hover:bg-white/60'}`}
+            />
+          ))}
+        </div>
+      )}
+    </figure>
+  );
+}
+
 function InternshipAccordion({ internship, isOpen, onToggle }) {
+  const hasImages = internship.images?.length > 0;
+
   return (
     <BorderGlow
       className="overflow-hidden"
@@ -54,6 +118,17 @@ function InternshipAccordion({ internship, isOpen, onToggle }) {
                     </li>
                   ))}
                 </ul>
+                {internship.projectLink && (
+                  <Link
+                    to={internship.projectLink.href}
+                    className="group inline-flex items-center gap-3 rounded-full border border-cyan-100/40 bg-[linear-gradient(135deg,rgba(103,232,249,0.18),rgba(245,184,75,0.14))] px-5 py-3 text-sm font-bold text-white shadow-[0_14px_36px_rgba(103,232,249,0.12)] transition hover:-translate-y-0.5 hover:border-cyan-100 hover:bg-cyan-100/20"
+                  >
+                    {internship.projectLink.label}
+                    <span className="grid h-7 w-7 place-items-center rounded-full bg-white text-ink transition group-hover:translate-x-0.5">
+                      <FaArrowRight aria-hidden="true" className="text-xs" />
+                    </span>
+                  </Link>
+                )}
               </div>
 
               <div className="space-y-4">
@@ -67,13 +142,17 @@ function InternshipAccordion({ internship, isOpen, onToggle }) {
                     ))}
                   </div>
                 </div>
-                <div className="rounded-lg border border-dashed border-white/15 bg-white/[0.03] p-4 text-sm leading-7 text-slate-300">
-                  <div className="mb-2 flex items-center gap-2 font-semibold text-white">
-                    <FaImages aria-hidden="true" className="text-cyan-100" />
-                    Media coming later
+                {hasImages ? (
+                  <InternshipCarousel internship={internship} />
+                ) : (
+                  <div className="rounded-lg border border-dashed border-white/15 bg-white/[0.03] p-4 text-sm leading-7 text-slate-300">
+                    <div className="mb-2 flex items-center gap-2 font-semibold text-white">
+                      <FaImages aria-hidden="true" className="text-cyan-100" />
+                      Media coming later
+                    </div>
+                    This internship is ready for photos, certificates, or project screenshots when you send them.
                   </div>
-                  This internship is ready for photos, certificates, or project screenshots when you send them.
-                </div>
+                )}
               </div>
             </div>
           </div>

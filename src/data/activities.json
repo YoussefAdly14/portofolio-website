@@ -68,7 +68,12 @@
       "Contributed to the success of a high-volume university event."
     ],
     "skills": ["Event Operations", "Logistics", "Coordination", "Ushering"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/caps-gowns-usher.jpg",
+        "alt": "Graduation caps and gowns usher team at a GUC distribution station"
+      }
+    ]
   },
   {
     "id": "orientation-hr-usher",
@@ -83,7 +88,12 @@
       "Designed workshop and activity ideas for multiple teams."
     ],
     "skills": ["HR Coordination", "Team Bonding", "Workshop Planning", "Communication"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/orientation-ushering.jpg",
+        "alt": "Orientation ushering team group photo outdoors on campus"
+      }
+    ]
   },
   {
     "id": "tedxguc-vip-usher",
@@ -98,7 +108,12 @@
       "Helped improve guest experience through attentive event support."
     ],
     "skills": ["Guest Relations", "Event Support", "Communication", "Ushering"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/tedx-ushering.jpg",
+        "alt": "TEDxGUC ushering team wearing high-visibility event vests"
+      }
+    ]
   },
   {
     "id": "revive-hr-member",
@@ -113,7 +128,12 @@
       "Planned workshops and activities for multiple teams."
     ],
     "skills": ["HR", "Teamwork", "Internal Communication", "Planning"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/revive-hr-member.jpg",
+        "alt": "Revive GUC HR team gathering during an outdoor campus activity"
+      }
+    ]
   },
   {
     "id": "employment-fair-usher",
@@ -128,7 +148,16 @@
       "Coordinated with exhibitors including Infomenia, Halliburton, LEONI, and Kader and Associates Designs."
     ],
     "skills": ["Event Logistics", "Stakeholder Support", "Communication", "Initiative"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/employment-fair-usher-1.jpg",
+        "alt": "Employment fair usher team photo in front of company sponsor wall"
+      },
+      {
+        "src": "/media/activities/employment-fair-usher-2.jpg",
+        "alt": "Employment fair usher team meeting group photo"
+      }
+    ]
   },
   {
     "id": "el-warsha-fundraising-member",
@@ -143,7 +172,12 @@
       "Built professional connections with business owners."
     ],
     "skills": ["Fundraising", "Sponsorships", "Partnerships", "Networking"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/el-warsha-fundraising.jpg",
+        "alt": "GUC El Warsha fundraising team group photo"
+      }
+    ]
   },
   {
     "id": "graduation-flow-usher",
@@ -158,7 +192,16 @@
       "Contributed to the overall success of the ceremony."
     ],
     "skills": ["Event Flow", "Operations", "Logistics", "Ushering"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/graduation-flow-usher-1.jpg",
+        "alt": "Graduation flow usher team photo during campus event operations"
+      },
+      {
+        "src": "/media/activities/graduation-flow-usher-2.jpg",
+        "alt": "Graduation flow usher team photo outdoors at night"
+      }
+    ]
   },
   {
     "id": "ieee-marketing-pr-member",
@@ -173,6 +216,11 @@
       "Edited videos to promote IEEE events."
     ],
     "skills": ["Marketing", "Public Relations", "Video Editing", "Event Promotion"],
-    "images": []
+    "images": [
+      {
+        "src": "/media/activities/ieee-marketing-pr.jpg",
+        "alt": "GUC IEEE Marketing and PR appreciation certificate photo"
+      }
+    ]
   }
 ]

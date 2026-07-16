@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import PillNav from '../navigation/PillNav.jsx';
 import ScrollToTop from './ScrollToTop.jsx';
+import SiteFooter from './SiteFooter.jsx';
 import navigation from '../../data/navigation.json';
 import logo from '../../assets/icons/logo.svg';
 
@@ -36,6 +37,7 @@ function SiteShell() {
         />
       </header>
       <Outlet />
+      <SiteFooter />
     </>
   );
 }

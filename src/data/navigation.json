@@ -4,10 +4,6 @@
     "href": "/"
   },
   {
-    "label": "About Me",
-    "href": "/about"
-  },
-  {
     "label": "Projects",
     "href": "/projects"
   },
@@ -16,7 +12,7 @@
     "href": "/internships"
   },
   {
-    "label": "Extracurricular Activities",
+    "label": "Extracurriculars",
     "href": "/extracurricular"
   },
   {

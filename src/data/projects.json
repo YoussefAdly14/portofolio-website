@@ -122,6 +122,32 @@
     "mediaNote": "Captured from the DB3 ASP.NET Web Forms dashboard styling with representative HR data; full runtime requires IIS/Visual Studio Web Application targets and SQL Server LocalDB."
   },
   {
+    "id": "smart-conveyor-belt-system",
+    "title": "Smart Conveyor Belt System — FPGA Project",
+    "category": "University",
+    "description": "An automated conveyor belt system designed and implemented using FPGA and VHDL, with real-time product counting displayed on a 7-segment display.",
+    "details": [
+      "Designed and implemented an automated conveyor belt system using FPGA and VHDL.",
+      "Implemented real-time product counting with output displayed on a 7-segment display.",
+      "Developed and simulated the system using ModelSim, including VHDL testbenches for verification.",
+      "Modeled system behavior using finite state machines (FSMs) for reliable control logic."
+    ],
+    "technologies": ["FPGA", "VHDL", "ModelSim", "FSM", "7-Segment Display"],
+    "image": "/media/projects/smart-conveyor-belt-system.png",
+    "media": {
+      "type": "video",
+      "src": "/media/projects/smart-conveyor-belt-system-demo.webm",
+      "poster": "/media/projects/smart-conveyor-belt-system.png",
+      "alt": "Smart conveyor belt FPGA project demo"
+    },
+    "github": "",
+    "demo": "",
+    "featured": false,
+    "date": "Fall 2025",
+    "status": "Completed",
+    "mediaNote": "Converted from the attached Smart Conveyor Belt demo video."
+  },
+  {
     "id": "operating-system-simulator",
     "title": "Operating System Simulator",
     "category": "University",
@@ -174,7 +200,7 @@
   {
     "id": "special-folio",
     "title": "Special Folio",
-    "category": "Personal",
+    "category": "University",
     "description": "A React portfolio platform for students, instructors, employers, and admins to showcase projects, manage portfolios, and connect around internships.",
     "details": [
       "Built a multi-role front-end prototype with authentication, protected routes, dashboards, portfolio browsing, course workflows, messaging, and notifications.",

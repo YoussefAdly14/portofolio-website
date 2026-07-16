@@ -2,7 +2,7 @@
   {
     "id": "flyrank-machine-learning",
     "company": "FlyRank",
-    "position": "Machine Learning Course / Internship",
+    "position": "Machine Learning Internship",
     "duration": "2026 - Present",
     "location": "Remote / Ongoing",
     "description": "Ongoing machine learning course and internship experience. Details, photos, and project outcomes will be added later.",
@@ -31,7 +31,11 @@
     "technologies": ["Frontend Engineering", "JavaScript", "React"],
     "skills": ["Frontend Development", "UI Implementation", "Team Workflow"],
     "status": "Ongoing",
-    "website": ""
+    "website": "",
+    "projectLink": {
+      "label": "View Foolix Frontend Project",
+      "href": "/projects/personal#foodics-internship-frontend"
+    }
   },
   {
     "id": "geidea-it-security",
@@ -49,7 +53,17 @@
     "technologies": ["Windows", "BIOS", "Jira", "IT Support"],
     "skills": ["Troubleshooting", "Technical Support", "Documentation", "Security Basics"],
     "status": "Completed",
-    "website": ""
+    "website": "",
+    "images": [
+      {
+        "src": "/media/internships/geidea-it-security-main.jpg",
+        "alt": "Geidea IT and security internship photo by the company logo wall"
+      },
+      {
+        "src": "/media/internships/geidea-it-security-1.jpg",
+        "alt": "Geidea IT and security internship team photo at the office"
+      }
+    ]
   },
   {
     "id": "foodics-backend-engineering",
@@ -67,6 +81,16 @@
     "technologies": ["Node.js", "PostgreSQL", "Prisma", "Docker", "Postman", "Jest"],
     "skills": ["Backend Development", "API Testing", "Team Workflow", "Async Programming"],
     "status": "Completed",
-    "website": ""
+    "website": "",
+    "projectLink": {
+      "label": "View Foolics API Project",
+      "href": "/projects/personal#foodics-ordering-backend"
+    },
+    "images": [
+      {
+        "src": "/media/internships/foodics-backend.jpg",
+        "alt": "Foodics backend software engineering internship photo at the Foodics office"
+      }
+    ]
   }
 ]

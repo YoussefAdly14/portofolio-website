@@ -1,13 +1,13 @@
 {
   "name": "Youssef Adly",
   "title": "Computer Engineering Student",
-  "subtitle": "Backend Development | Embedded Systems | Cybersecurity",
-  "introduction": "Computer Engineering student building reliable software across backend systems, embedded platforms, and security-focused applications.",
-  "location": "Cairo, Egypt",
-  "currentUniversity": "Faculty of Engineering",
-  "degree": "B.Sc. Computer Engineering",
-  "interests": ["Backend Architecture", "Embedded Systems", "Cybersecurity", "Distributed Systems"],
-  "futureGoals": "Grow into a software engineer who can design dependable systems, work across the stack when needed, and contribute to teams shipping production-quality products.",
+  "subtitle": "Embedded Systems | Cybersecurity | AI/ML | Digital Hardware | Software Engineering",
+  "introduction": "Computer Engineering student exploring the space between software and hardware, with interests in embedded systems, secure computing, AI/ML, and digital design for chip-adjacent engineering.",
+  "location": "New Cairo, Egypt",
+  "currentUniversity": "German University in Cairo",
+  "degree": "B.Eng. Computer Engineering",
+  "interests": ["Embedded Systems", "Cybersecurity", "AI/Machine Learning", "Digital Hardware", "Backend Systems"],
+  "futureGoals": "Grow into a computer engineer who can move across software, hardware-aware systems, and emerging AI/security domains while contributing to teams building dependable technology.",
   "journey": [
     {
       "title": "High School",
@@ -37,12 +37,12 @@
     {
       "title": "Current Interests",
       "subtitle": "Reliable software at system boundaries",
-      "description": "Current focus areas include backend APIs, database design, Linux-based systems, security fundamentals, and embedded software."
+      "description": "Current focus areas include embedded software, security fundamentals, AI/ML foundations, backend systems, and the digital logic concepts behind hardware-aware engineering."
     },
     {
       "title": "Future Goals",
       "subtitle": "Engineering maturity over shortcuts",
-      "description": "The goal is to contribute to engineering teams that value maintainable systems, thoughtful UX, and strong execution."
+      "description": "The goal is to contribute to engineering teams working on dependable systems across embedded platforms, security, AI-enabled products, or hardware-adjacent computing."
     }
   ]
 }
