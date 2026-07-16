@@ -67,11 +67,11 @@ function FadeSection({ children, className = '', delay = 0 }) {
 
 function SectionIntro({ eyebrow, title, description, action }) {
   return (
-    <div className="mx-auto mb-8 flex max-w-6xl flex-col justify-between gap-5 sm:flex-row sm:items-end">
-      <div className="max-w-2xl space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200/75">{eyebrow}</p>
-        <h2 className="text-3xl font-semibold text-white sm:text-4xl">{title}</h2>
-        <p className="text-base leading-8 text-slate-300">{description}</p>
+    <div className="mx-0 mb-8 flex max-w-6xl flex-col justify-between gap-5 sm:mx-auto md:flex-row md:items-end">
+      <div className="max-w-[21.5rem] space-y-3 sm:max-w-2xl">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-cyan-200/75 sm:text-xs sm:tracking-[0.24em]">{eyebrow}</p>
+        <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">{title}</h2>
+        <p className="text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">{description}</p>
       </div>
       {action}
     </div>
@@ -86,7 +86,7 @@ function HomePage() {
     <main className="relative isolate min-h-screen overflow-hidden bg-ink text-white">
       <RocketFlight />
       <section
-        className="relative isolate flex min-h-screen items-start px-5 pb-14 pt-32 sm:items-center sm:px-8 sm:pt-28 lg:px-12"
+        className="relative isolate flex min-h-screen items-start px-5 pb-14 pt-28 sm:items-center sm:px-8 sm:pt-28 lg:px-12"
         aria-labelledby="home-title"
       >
         <div className="absolute inset-0 -z-20 bg-ink">
@@ -107,16 +107,16 @@ function HomePage() {
         </div>
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_42%,rgba(255,255,255,0.045),transparent_30%),linear-gradient(180deg,rgba(9,9,11,0.02),rgba(9,9,11,0.45)_64%,#09090b_100%)]" />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-9 lg:grid-cols-[1.03fr_0.97fr]">
-          <div className="max-w-2xl space-y-6 sm:space-y-7">
+        <div className="relative z-10 mx-0 grid w-full max-w-[21.5rem] min-w-0 items-center gap-8 sm:mx-auto sm:max-w-6xl lg:grid-cols-[1.03fr_0.97fr] lg:gap-9">
+          <div className="min-w-0 max-w-[21.5rem] space-y-6 sm:max-w-2xl sm:space-y-7">
             <div className="space-y-4">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80 sm:text-xs sm:tracking-[0.26em]">{home.hero.eyebrow}</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-cyan-200/80 sm:text-xs sm:tracking-[0.26em]">{home.hero.eyebrow}</p>
               <div className="space-y-3">
-                <h1 id="home-title" className="text-balance text-[clamp(3rem,14vw,4rem)] font-semibold leading-[1.03] text-white sm:text-6xl lg:text-7xl">
+                <h1 id="home-title" className="max-w-full text-balance text-[2.45rem] font-semibold leading-[1.03] text-white sm:text-6xl lg:text-7xl">
                   {profile.name}
                 </h1>
                 <p className="text-xl font-medium leading-snug text-cyan-100 sm:text-2xl">{profile.title}</p>
-                <p className="max-w-xl text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">{profile.introduction}</p>
+                <p className="max-w-full break-words text-[15px] leading-7 text-slate-300 [overflow-wrap:anywhere] sm:max-w-xl sm:text-base sm:leading-8 sm:[overflow-wrap:normal]">{profile.introduction}</p>
               </div>
             </div>
 
@@ -137,23 +137,23 @@ function HomePage() {
               </Link>
             </div>
 
-            <dl className="grid max-w-2xl grid-cols-1 gap-4 text-sm text-slate-300 sm:grid-cols-3">
+            <dl className="grid max-w-full grid-cols-1 gap-4 text-sm text-slate-300 sm:max-w-2xl sm:grid-cols-3">
               <div className="border-l border-white/15 pl-4">
                 <dt className="font-semibold text-white">{profile.degree}</dt>
-                <dd>{profile.currentUniversity}</dd>
+                <dd className="break-words">{profile.currentUniversity}</dd>
               </div>
               <div className="border-l border-white/15 pl-4">
                 <dt className="font-semibold text-white">Focus</dt>
-                <dd>{profile.subtitle}</dd>
+                <dd className="break-words [overflow-wrap:anywhere] sm:[overflow-wrap:normal]">{profile.subtitle}</dd>
               </div>
               <div className="border-l border-white/15 pl-4">
                 <dt className="font-semibold text-white">Location</dt>
-                <dd>{profile.location}</dd>
+                <dd className="break-words">{profile.location}</dd>
               </div>
             </dl>
           </div>
 
-          <div className="mx-auto w-full max-w-[470px]">
+          <div className="mx-0 w-full max-w-[470px] min-w-0 sm:mx-auto">
             <div className="rounded-lg border border-white/10 bg-black/35 p-3 shadow-lift backdrop-blur-md">
               <div className="overflow-hidden rounded-lg bg-white/[0.03]">
                 <TiltedCard
@@ -185,7 +185,7 @@ function HomePage() {
       <div className="relative bg-ink px-5 py-20 sm:px-8 lg:px-12">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,#09090b,rgba(9,9,11,0.96)_28%,#09090b)]" />
 
-        <div className="relative z-10 mx-auto space-y-24">
+        <div className="relative z-10 mx-0 w-full max-w-[21.5rem] min-w-0 space-y-24 sm:mx-auto sm:max-w-none">
           <FadeSection>
             <SectionIntro
               eyebrow="Selected Work"
@@ -202,7 +202,7 @@ function HomePage() {
               }
             />
 
-            <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="mx-auto hidden max-w-6xl gap-5 sm:grid lg:grid-cols-[0.9fr_1.1fr]">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
                 {home.folderLinks.map(folder => (
                   <BorderGlow
@@ -240,25 +240,25 @@ function HomePage() {
               </div>
 
               <div className="grid gap-4">
-                {featuredProjects.map(project => (
+                {featuredProjects.map((project, index) => (
                   <BorderGlow
                     key={project.id}
-                    className="overflow-hidden"
+                    className={`${index > 0 ? 'hidden sm:block' : ''} overflow-hidden`}
                     borderRadius={8}
                     backgroundColor="rgba(13, 17, 29, 0.74)"
                     glowColor="195 90 70"
                     glowRadius={18}
                     fillOpacity={0.14}
                   >
-                    <article className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
-                      <div className="space-y-2">
+                    <article className="flex min-w-0 flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="min-w-0 space-y-2">
                         <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                          <h3 className="break-words text-xl font-semibold text-white">{project.title}</h3>
                           <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-cyan-100">
                             {project.category}
                           </span>
                         </div>
-                        <p className="max-w-2xl text-sm leading-7 text-slate-300">{project.description}</p>
+                        <p className="max-w-2xl break-words text-sm leading-7 text-slate-300">{project.description}</p>
                       </div>
                       <div className="flex shrink-0 flex-wrap gap-2">
                         {project.technologies.slice(0, 3).map(technology => (
@@ -290,11 +290,11 @@ function HomePage() {
               }
             />
 
-            <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-2">
-              {internships.slice(0, 3).map(internship => (
+            <div className="mx-auto hidden max-w-6xl gap-5 sm:grid lg:grid-cols-2">
+              {internships.slice(0, 3).map((internship, index) => (
                 <BorderGlow
                   key={internship.id}
-                  className="h-full overflow-hidden"
+                  className={`${index > 0 ? 'hidden sm:block' : ''} h-full overflow-hidden`}
                   borderRadius={8}
                   backgroundColor="rgba(13, 17, 29, 0.78)"
                   glowColor="195 90 70"
@@ -337,11 +337,11 @@ function HomePage() {
               }
             />
 
-            <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-3">
-              {activities.slice(0, 3).map(activity => (
+            <div className="mx-auto hidden max-w-6xl gap-5 sm:grid md:grid-cols-3">
+              {activities.slice(0, 3).map((activity, index) => (
                 <BorderGlow
                   key={`${activity.organization}-${activity.position}`}
-                  className="h-full overflow-hidden"
+                  className={`${index > 0 ? 'hidden sm:block' : ''} h-full overflow-hidden`}
                   borderRadius={8}
                   backgroundColor="rgba(13, 17, 29, 0.74)"
                   glowColor="42 90 70"

@@ -93,15 +93,15 @@ function ContactPage() {
       </div>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_74%_18%,rgba(103,232,249,0.08),transparent_28%),linear-gradient(180deg,rgba(9,9,11,0.18),#09090b_72%)]" />
 
-      <section className="mx-auto grid min-h-[calc(100vh-8rem)] w-full max-w-7xl items-center gap-8 xl:grid-cols-[0.8fr_1.2fr]">
-        <div className="max-w-2xl space-y-7 xl:max-w-none">
+      <section className="mx-0 grid min-h-[calc(100vh-8rem)] w-full max-w-[21.5rem] min-w-0 items-center gap-8 sm:mx-auto sm:max-w-7xl xl:grid-cols-[0.8fr_1.2fr]">
+        <div className="min-w-0 max-w-[21.5rem] space-y-7 sm:max-w-2xl xl:max-w-none">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-200/80">Contact & CV</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80 sm:text-xs sm:tracking-[0.26em]">Contact & CV</p>
             <div className="space-y-3">
-              <h1 className="text-balance text-4xl font-semibold leading-[1.04] text-white sm:text-5xl lg:text-6xl">
+              <h1 className="text-balance text-[2.35rem] font-semibold leading-[1.05] text-white sm:text-5xl lg:text-6xl">
                 Let's connect.
               </h1>
-              <p className="max-w-xl text-base leading-8 text-slate-300 xl:max-w-lg">
+              <p className="max-w-full break-words text-[15px] leading-7 text-slate-300 [overflow-wrap:anywhere] sm:max-w-xl sm:text-base sm:leading-8 sm:[overflow-wrap:normal] xl:max-w-lg">
                 Reach out for internships, software engineering opportunities, collaborations, or CV details. I am based in {contact.location}.
               </p>
             </div>
@@ -111,7 +111,7 @@ function ContactPage() {
             <a
               href={resumePdf}
               download
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
             >
               Download CV
               <FaDownload aria-hidden="true" className="text-xs" />
@@ -120,7 +120,7 @@ function ContactPage() {
               href={emailHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/12"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/12"
             >
               Send email
               <FaEnvelope aria-hidden="true" className="text-xs" />
@@ -143,8 +143,8 @@ function ContactPage() {
         >
           <div className="min-w-0 space-y-7 p-4 sm:p-6 lg:p-8">
             <div className="space-y-2">
-              <h2 className="text-2xl font-semibold text-white">{profile.name}</h2>
-              <p className="text-sm leading-7 text-slate-300">{profile.title} | {profile.subtitle}</p>
+              <h2 className="break-words text-2xl font-semibold text-white">{profile.name}</h2>
+              <p className="break-words text-sm leading-7 text-slate-300 [overflow-wrap:anywhere] sm:[overflow-wrap:normal]">{profile.title} | {profile.subtitle}</p>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-3">

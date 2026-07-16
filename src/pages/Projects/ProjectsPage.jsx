@@ -67,7 +67,7 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
           type="button"
           onClick={onToggle}
           aria-expanded={isOpen}
-          className="flex w-full flex-col gap-5 p-5 text-left transition hover:bg-white/[0.02] lg:flex-row lg:items-center lg:justify-between lg:p-6"
+          className="flex w-full min-w-0 flex-col gap-4 p-4 text-left transition hover:bg-white/[0.02] sm:p-5 lg:flex-row lg:items-center lg:justify-between lg:gap-5 lg:p-6"
         >
           <span className="flex min-w-0 gap-4">
             <span className="hidden h-20 w-24 shrink-0 place-items-center rounded-lg border border-white/10 bg-white/[0.04] sm:grid">
@@ -75,7 +75,7 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
             </span>
             <span className="min-w-0 space-y-2">
               <span className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200/75">{project.date}</span>
+                <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan-200/75 sm:text-xs sm:tracking-[0.2em]">{project.date}</span>
                 <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
                   {project.category}
                 </span>
@@ -83,8 +83,8 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
                   {project.status}
                 </span>
               </span>
-              <span className="block text-2xl font-semibold text-white">{project.title}</span>
-              <span className="block max-w-3xl text-sm leading-7 text-slate-300">{project.description}</span>
+              <span className="block break-words text-xl font-semibold leading-tight text-white sm:text-2xl">{project.title}</span>
+              <span className="block max-w-3xl break-words text-sm leading-7 text-slate-300">{project.description}</span>
             </span>
           </span>
           <span className="flex shrink-0 items-center gap-3 text-sm font-semibold text-cyan-100">
@@ -94,14 +94,14 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
         </button>
 
         {isOpen && (
-          <div className="border-t border-white/10 px-5 pb-6 pt-5 lg:px-6">
+          <div className="border-t border-white/10 px-4 pb-5 pt-5 sm:px-5 sm:pb-6 lg:px-6">
             <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">
               <div className="space-y-5">
                 <ul className="space-y-3">
                   {project.details.map(detail => (
                     <li key={detail} className="flex gap-3 text-sm leading-7 text-slate-300">
                       <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-200" />
-                      <span>{detail}</span>
+                      <span className="min-w-0 break-words">{detail}</span>
                     </li>
                   ))}
                 </ul>
@@ -120,7 +120,7 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
                       href={project.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
+                      className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100 sm:flex-none"
                     >
                       View GitHub
                       <FaGithub aria-hidden="true" className="text-sm" />
@@ -131,7 +131,7 @@ function ProjectAccordion({ project, isOpen, onToggle }) {
                       href={project.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-cyan-100/40 bg-cyan-100/10 px-4 py-2 text-sm font-bold text-cyan-50 transition hover:-translate-y-0.5 hover:border-cyan-100 hover:bg-cyan-100/20"
+                      className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full border border-cyan-100/40 bg-cyan-100/10 px-4 py-2 text-sm font-bold text-cyan-50 transition hover:-translate-y-0.5 hover:border-cyan-100 hover:bg-cyan-100/20 sm:flex-none"
                     >
                       Live Demo
                       <FaArrowUpRightFromSquare aria-hidden="true" className="text-xs" />
@@ -189,33 +189,30 @@ function ProjectsPage() {
   const { pathname, hash } = useLocation();
   const [filter, setFilter] = useState(getInitialFilter(pathname));
   const [page, setPage] = useState(0);
-  const [openId, setOpenId] = useState(orderedProjects[0]?.id);
+  const [openId, setOpenId] = useState('');
 
   useEffect(() => {
     const routeFilter = getInitialFilter(pathname);
     const targetId = decodeURIComponent(hash.replace(/^#/, ''));
-
-    if (!targetId) {
-      setFilter(routeFilter);
-      setPage(0);
-      setOpenId((routeFilter === 'All' ? orderedProjects : orderedProjects.filter(project => project.category === routeFilter))[0]?.id || '');
-      return;
-    }
 
     const targetProject = orderedProjects.find(project => project.id === targetId);
     const nextFilter = routeFilter === 'All' || !targetProject ? routeFilter : targetProject.category;
     const nextProjects = nextFilter === 'All' ? orderedProjects : orderedProjects.filter(project => project.category === nextFilter);
     const targetIndex = nextProjects.findIndex(project => project.id === targetId);
 
-    setFilter(nextFilter);
+    window.setTimeout(() => {
+      setFilter(nextFilter);
 
-    if (targetIndex >= 0) {
-      setPage(Math.floor(targetIndex / PAGE_SIZE));
-      setOpenId(targetId);
-      window.setTimeout(() => {
+      if (targetIndex >= 0) {
+        setPage(Math.floor(targetIndex / PAGE_SIZE));
+        setOpenId(targetId);
         document.getElementById(targetId)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
-      }, 0);
-    }
+        return;
+      }
+
+      setPage(0);
+      setOpenId('');
+    }, 0);
   }, [pathname, hash]);
 
   const filteredProjects = useMemo(() => {
@@ -227,16 +224,15 @@ function ProjectsPage() {
   const visibleProjects = filteredProjects.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
   const changeFilter = nextFilter => {
-    const nextProjects = nextFilter === 'All' ? orderedProjects : orderedProjects.filter(project => project.category === nextFilter);
     setFilter(nextFilter);
     setPage(0);
-    setOpenId(nextProjects[0]?.id || '');
+    setOpenId('');
   };
 
   const goToPage = nextPage => {
     const safePage = Math.min(Math.max(nextPage, 0), totalPages - 1);
     setPage(safePage);
-    setOpenId(filteredProjects[safePage * PAGE_SIZE]?.id || '');
+    setOpenId('');
     requestAnimationFrame(() => {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     });
@@ -249,25 +245,25 @@ function ProjectsPage() {
       </div>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_18%,rgba(103,232,249,0.08),transparent_30%),linear-gradient(180deg,rgba(9,9,11,0.16),#09090b_74%)]" />
 
-      <section className="mx-auto max-w-6xl space-y-8">
+      <section className="mx-0 w-full max-w-[21.5rem] min-w-0 space-y-8 sm:mx-auto sm:max-w-6xl">
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <div className="max-w-3xl space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-200/80">Projects</p>
-            <h1 className="text-balance text-5xl font-semibold leading-[1.03] text-white sm:text-6xl">
+          <div className="max-w-[21.5rem] space-y-4 sm:max-w-3xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80 sm:text-xs sm:tracking-[0.26em]">Projects</p>
+            <h1 className="text-balance text-[2.35rem] font-semibold leading-[1.05] text-white sm:text-5xl md:text-6xl">
               Work built across backend, systems, databases, and the web.
             </h1>
-            <p className="max-w-2xl text-base leading-8 text-slate-300">
+            <p className="max-w-full break-words text-[15px] leading-7 text-slate-300 [overflow-wrap:anywhere] sm:max-w-2xl sm:text-base sm:leading-8 sm:[overflow-wrap:normal]">
               A paginated project collection sourced from my CV, GitHub repositories, and this portfolio build, with captured screenshots and demo media where each project can run locally.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1">
+          <div className="grid w-full max-w-[21.5rem] grid-cols-3 gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 sm:w-auto sm:max-w-none sm:flex sm:flex-wrap sm:gap-2">
             {['All', 'Personal', 'University'].map(option => (
               <button
                 key={option}
                 type="button"
                 onClick={() => changeFilter(option)}
-                className={`rounded-full px-4 py-2 text-sm font-bold transition ${filter === option ? 'bg-white text-ink' : 'text-white hover:bg-white/10'}`}
+                className={`min-h-10 rounded-full px-3 py-2 text-sm font-bold transition sm:px-4 ${filter === option ? 'bg-white text-ink' : 'text-white hover:bg-white/10'}`}
               >
                 {option}
               </button>

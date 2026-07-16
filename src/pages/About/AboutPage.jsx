@@ -23,7 +23,7 @@ const highlights = [
 
 function AboutPage() {
   return (
-    <main className="relative isolate min-h-screen overflow-x-hidden bg-ink px-5 pb-20 pt-32 text-white sm:px-8 lg:px-12">
+    <main className="relative isolate min-h-screen overflow-x-hidden bg-ink px-5 pb-20 pt-28 text-white sm:px-8 sm:pt-32 lg:px-12">
       <div className="absolute inset-0 -z-20">
         <SideRays
           speed={1.25}
@@ -36,15 +36,15 @@ function AboutPage() {
       </div>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_72%_18%,rgba(103,232,249,0.08),transparent_30%),linear-gradient(180deg,rgba(9,9,11,0.16),#09090b_74%)]" />
 
-      <section className="mx-auto grid min-h-[calc(100vh-8rem)] max-w-6xl items-center gap-8 xl:grid-cols-[0.82fr_1.18fr]">
-        <div className="space-y-7">
+      <section className="mx-0 grid min-h-[calc(100vh-8rem)] w-full max-w-[21.5rem] min-w-0 items-center gap-8 sm:mx-auto sm:max-w-6xl xl:grid-cols-[0.82fr_1.18fr]">
+        <div className="min-w-0 max-w-[21.5rem] space-y-7 sm:max-w-none">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-200/80">About Me</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-200/80 sm:text-xs sm:tracking-[0.26em]">About Me</p>
             <div className="space-y-3">
-              <h1 className="text-balance text-5xl font-semibold leading-[1.03] text-white sm:text-6xl">
+              <h1 className="text-balance text-[2.35rem] font-semibold leading-[1.05] text-white sm:text-5xl md:text-6xl">
                 The story behind {profile.name}.
               </h1>
-              <p className="max-w-xl text-base leading-8 text-slate-300">
+              <p className="max-w-full break-words text-[15px] leading-7 text-slate-300 [overflow-wrap:anywhere] sm:max-w-xl sm:text-base sm:leading-8 sm:[overflow-wrap:normal]">
                 A more personal introduction to the person behind the projects, internships, and technical interests.
               </p>
             </div>
@@ -68,10 +68,10 @@ function AboutPage() {
           glowRadius={24}
           fillOpacity={0.16}
         >
-          <article className="space-y-6 p-5 sm:p-8">
+          <article className="space-y-6 p-4 sm:p-6 lg:p-8">
             <div className="space-y-5">
               {storyParagraphs.map(paragraph => (
-                <p key={paragraph} className="text-base leading-8 text-slate-300">
+                <p key={paragraph} className="break-words text-[15px] leading-7 text-slate-300 sm:text-base sm:leading-8">
                   {paragraph}
                 </p>
               ))}
@@ -80,7 +80,7 @@ function AboutPage() {
             <div className="border-t border-white/10 pt-6">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-cyan-100 sm:w-auto"
               >
                 Go to Contact & CV
                 <FaArrowRight aria-hidden="true" className="text-xs" />

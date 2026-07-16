@@ -3,11 +3,11 @@
     "id": "portfolio-website",
     "title": "Portfolio Website",
     "category": "Personal",
-    "description": "A modern, data-driven React portfolio with polished navigation, interactive backgrounds, reusable components, and recruiter-focused content architecture.",
+    "description": "A modern, data-driven React portfolio with polished navigation, scroll-based visual effects, reusable components, and recruiter-focused content architecture.",
     "details": [
-      "Built with React, Vite, Tailwind CSS, React Router, and ReactBits-inspired visual components.",
-      "Implemented interactive Galaxy background, collapsible navigation, responsive pages, and JSON-driven content.",
-      "Designed dedicated pages for About, Contact & CV, Extracurricular Activities, and future project/internship expansion."
+      "Built 6 routed portfolio areas with React, Vite, Tailwind CSS, React Router, and ReactBits-inspired visual components.",
+      "Implemented interactive Galaxy and SideRays backgrounds, collapsible navigation, scroll-controlled rocket motion, responsive pages, and JSON-driven content.",
+      "Structured projects, internships, extracurriculars, contact details, and CV access through reusable page components and centralized data files."
     ],
     "technologies": ["React", "Vite", "Tailwind CSS", "React Router", "ReactBits"],
     "image": "/media/projects/portfolio-website.png",
@@ -30,9 +30,9 @@
     "category": "Personal",
     "description": "A Foodics internship backend API for an online ordering system, built to support a separate frontend team with documented auth, cart, order, stock, and admin workflows.",
     "details": [
-      "Developed Express REST APIs for user registration/login, product lookup, cart management, order creation, admin dashboard data, stock updates, and order-status transitions.",
+      "Developed Express REST APIs covering user registration/login, product lookup, cart management, order creation, admin dashboard data, stock updates, and order-status transitions.",
       "Integrated PostgreSQL with Prisma models for users, carts, cart items, products, orders, and order items, with JWT authentication and admin authorization middleware.",
-      "Documented the API with Swagger UI, added Jest and Supertest coverage for the core endpoints, and provided Docker setup for local handoff to the frontend team."
+      "Documented the API with Swagger UI, added Jest and Supertest coverage for core endpoint workflows, and provided Docker setup for handoff to the frontend team."
     ],
     "technologies": ["Node.js", "Express", "PostgreSQL", "Prisma", "JWT", "Swagger UI", "Jest", "Docker"],
     "image": "/media/projects/foolics-api-dashboard.png",
@@ -54,9 +54,9 @@
     "category": "Personal",
     "description": "A deployed Vue 3 ordering app for Foolix with role-based cashier POS and operations dashboard experiences built during the Foodics frontend internship.",
     "details": [
-      "Built one Vite and Vue 3 codebase for cashier and admin workflows, with login-gated role-based routing.",
-      "Implemented a shared API client, Pinia state management, menu browsing, cart and checkout flows, dashboard orders board, and menu management screens.",
-      "Deployed on Vercel at https://foodics-internship-2026-fe.vercel.app with history-mode route rewrites for direct links and refreshes."
+      "Built one Vite and Vue 3 codebase supporting separate cashier POS and admin operations workflows with login-gated role-based routing.",
+      "Implemented shared API access, Pinia state management, menu browsing, cart and checkout flows, dashboard order tracking, and menu management screens.",
+      "Deployed the app on Vercel with history-mode route rewrites so direct links and refreshes work correctly."
     ],
     "technologies": ["Vue 3", "Vite", "Pinia", "Vue Router", "Tailwind CSS", "Vitest"],
     "image": "/media/projects/foolix-foodics-frontend.png",
@@ -79,9 +79,9 @@
     "category": "University",
     "description": "A full-stack travel website where users can browse destinations, create accounts, search places, and manage a want-to-go list.",
     "details": [
-      "Built a client-server full-stack web application using Node.js, Express.js, MongoDB, EJS, JavaScript, and HTML.",
-      "Implemented authentication, sessions, secure routing, and access control.",
-      "Designed MongoDB CRUD operations, duplicate validation, destination pages, want-to-go lists, and substring-based search."
+      "Built a client-server full-stack travel application using Node.js, Express.js, MongoDB, EJS, JavaScript, and HTML.",
+      "Implemented account registration/login, session-based authentication, protected routing, and access control.",
+      "Designed MongoDB CRUD workflows for destinations and want-to-go lists, including duplicate validation and substring-based search."
     ],
     "technologies": ["Node.js", "Express.js", "MongoDB", "EJS", "JavaScript"],
     "image": "/media/projects/travel-web-application.png",
@@ -103,9 +103,9 @@
     "category": "University",
     "description": "A full-stack HR management web application for payroll, attendance, leave approvals, and role-based administration.",
     "details": [
-      "Developed with ASP.NET and SQL Server using Admin, HR, and Employee access roles.",
-      "Designed relational database procedures, functions, and views for payroll, attendance, deductions, leave workflows, and approvals.",
-      "Implemented authentication, automated payroll calculations, performance tracking, and frontend-backend validation."
+      "Developed an ASP.NET and SQL Server application across Admin, HR, and Employee access roles.",
+      "Designed relational database procedures, functions, and views for payroll, attendance, deductions, leave requests, replacements, and approvals.",
+      "Implemented authentication, automated payroll calculations, performance tracking, and frontend-backend validation for HR operations."
     ],
     "technologies": ["ASP.NET", "SQL Server", "C#", "Database Design"],
     "image": "/media/projects/hr-management-system.png",
@@ -127,9 +127,9 @@
     "category": "University",
     "description": "An automated conveyor belt system designed and implemented using FPGA and VHDL, with real-time product counting displayed on a 7-segment display.",
     "details": [
-      "Designed and implemented an automated conveyor belt system using FPGA and VHDL.",
+      "Designed and implemented automated conveyor belt control logic using FPGA and VHDL.",
       "Implemented real-time product counting with output displayed on a 7-segment display.",
-      "Developed and simulated the system using ModelSim, including VHDL testbenches for verification.",
+      "Developed ModelSim simulations and VHDL testbenches to verify the control flow before demoing the system.",
       "Modeled system behavior using finite state machines (FSMs) for reliable control logic."
     ],
     "technologies": ["FPGA", "VHDL", "ModelSim", "FSM", "7-Segment Display"],
@@ -154,8 +154,8 @@
     "description": "A C-based simulation of monolithic operating system concepts with process scheduling, memory management, disk swapping, and resource mutexes.",
     "details": [
       "Built a custom text-based program interpreter for OS course workflows.",
-      "Implemented memory management with disk swapping and synchronized resource access.",
-      "Compared multiple process scheduling algorithms and simulated core OS behavior."
+      "Implemented process scheduling, memory management, disk swapping, and synchronized resource access with mutex-style controls.",
+      "Compared multiple scheduling algorithms and simulated core monolithic OS behavior through controlled test programs."
     ],
     "technologies": ["C", "Operating Systems", "Scheduling", "Memory Management"],
     "image": "/media/projects/operating-system-simulator.png",
@@ -178,9 +178,9 @@
     "category": "University",
     "description": "A C-based simulation of a pipelined Harvard Architecture processor for the Computer Systems Architecture course at GUC.",
     "details": [
-      "Implemented a custom 16-bit instruction set architecture.",
-      "Built a 3-stage instruction pipeline with hazard handling.",
-      "Simulated processor behavior for the Double McHarvard package specification."
+      "Implemented a custom 16-bit instruction set architecture for the Double McHarvard processor specification.",
+      "Built a 3-stage instruction pipeline with hazard handling and separated instruction/data memory behavior.",
+      "Simulated instruction execution to verify register, memory, and pipeline-state behavior."
     ],
     "technologies": ["C", "Computer Architecture", "Pipelining", "ISA"],
     "image": "/media/projects/computer-architecture-processor.png",
@@ -203,7 +203,7 @@
     "category": "University",
     "description": "A React portfolio platform for students, instructors, employers, and admins to showcase projects, manage portfolios, and connect around internships.",
     "details": [
-      "Built a multi-role front-end prototype with authentication, protected routes, dashboards, portfolio browsing, course workflows, messaging, and notifications.",
+      "Built a 4-role front-end prototype with authentication, protected routes, dashboards, portfolio browsing, course workflows, messaging, and notifications.",
       "Implemented student, instructor, employer, and admin experiences using React Router, local state, dummy data, charts, and reusable layout components.",
       "Captured a local walkthrough covering login, project browsing, and statistics screens."
     ],

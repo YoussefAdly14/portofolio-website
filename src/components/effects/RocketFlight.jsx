@@ -169,7 +169,7 @@ function RocketFlight() {
   }
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[2] overflow-hidden opacity-65 sm:opacity-75 md:opacity-85" aria-hidden="true">
+    <div className="pointer-events-none fixed inset-0 z-[2] hidden overflow-hidden opacity-75 sm:block md:opacity-85" aria-hidden="true">
       <style>
         {`
           @keyframes rocket-flame {

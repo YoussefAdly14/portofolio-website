@@ -3,13 +3,13 @@
 
   # Youssef Adly Portfolio
 
-  A modern, interactive software engineering portfolio built with React, Vite, Tailwind CSS, React Router, and ReactBits-inspired visual components.
+  A modern, interactive computer engineering portfolio built with React, Vite, Tailwind CSS, React Router, and ReactBits-inspired visual components.
 
   <p>
     <a href="https://github.com/YoussefAdly14">GitHub</a>
-    ·
+    &middot;
     <a href="https://www.linkedin.com/in/youssef-adly-755261314">LinkedIn</a>
-    ·
+    &middot;
     <a href="./src/assets/resume/Youssef-Adly-CV.pdf">CV</a>
   </p>
 </div>
@@ -19,27 +19,23 @@
 ## Preview
 
 <p align="center">
-  <img src="./src/assets/images/youssef-adly-profile.jpeg" alt="Youssef Adly" width="520" />
+  <img src="./public/media/projects/portfolio-website.png" alt="Youssef Adly portfolio preview" width="720" />
 </p>
 
-This portfolio presents my work, internships, extracurricular activities, personal story, and contact details in a polished recruiter-friendly experience.
+This portfolio presents my projects, internships, extracurricular activities, personal story, and contact details in a polished recruiter-friendly experience.
 
 ## Highlights
 
 - Interactive ReactBits-style Galaxy hero background
+- Scroll-controlled rocket background effect
 - Collapsible PillNav navigation
 - Section-by-section homepage with fade-in reveals
-- Projects section split into Personal and University work
+- Projects split into Personal and University work
+- Dedicated internships page with project links and media galleries
 - Dedicated Contact & CV page with downloadable resume
 - Expandable extracurricular experiences with pagination
 - Responsive layouts for desktop, tablets, and phones
 - Data-driven content using JSON files in `src/data`
-
-## Visual Sections
-
-| Projects | Internships | Activities |
-| --- | --- | --- |
-| <img src="./src/assets/images/project-portfolio.svg" alt="Portfolio project preview" width="220" /> | <img src="./src/assets/logos/company-niletech.svg" alt="Internship logo preview" width="160" /> | <img src="./src/assets/images/project-architecture.svg" alt="Activities visual preview" width="220" /> |
 
 ## Tech Stack
 
@@ -50,7 +46,7 @@ This portfolio presents my work, internships, extracurricular activities, person
 | Routing | React Router |
 | Icons | React Icons |
 | Motion/Visuals | Motion, GSAP, OGL |
-| Components | ReactBits-inspired Galaxy, SideRays, Folder, PillNav, BorderGlow, TiltedCard |
+| Components | Galaxy, SideRays, Folder, PillNav, BorderGlow, TiltedCard |
 | Deployment | Vercel-ready static frontend |
 
 ## Project Structure
@@ -59,15 +55,15 @@ This portfolio presents my work, internships, extracurricular activities, person
 src/
   assets/          Images, icons, logos, and CV
   backgrounds/     Galaxy and SideRays visual backgrounds
-  components/      Layout, navigation, cards, and reusable UI
+  components/      Layout, navigation, cards, effects, and reusable UI
   data/            JSON-driven portfolio content
-  pages/           Home, About, Contact, Extracurricular, and placeholders
+  pages/           Home, About, Projects, Internships, Extracurricular, and Contact
   styles/          Global Tailwind styles
 ```
 
 ## Getting Started
 
-Clone the project and install dependencies:
+Install dependencies:
 
 ```bash
 npm install
@@ -118,7 +114,7 @@ Output Directory: dist
 
 ## Status
 
-Currently under active development. The homepage, About page, Contact & CV page, and Extracurricular Activities page are implemented. Project and internship detail pages are planned for future expansion.
+Currently under active development with implemented pages for Home, About, Projects, Internships, Extracurriculars, and Contact & CV.
 
 ---
 
