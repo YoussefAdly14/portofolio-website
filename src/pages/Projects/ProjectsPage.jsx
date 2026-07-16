@@ -257,13 +257,13 @@ function ProjectsPage() {
             </p>
           </div>
 
-          <div className="grid w-full max-w-[21.5rem] grid-cols-3 gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 sm:w-auto sm:max-w-none sm:flex sm:flex-wrap sm:gap-2">
+          <div className="grid w-full max-w-[21.5rem] grid-cols-3 gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 sm:w-auto sm:max-w-none sm:flex sm:flex-nowrap sm:gap-1 lg:shrink-0">
             {['All', 'Personal', 'University'].map(option => (
               <button
                 key={option}
                 type="button"
                 onClick={() => changeFilter(option)}
-                className={`min-h-10 rounded-full px-3 py-2 text-sm font-bold transition sm:px-4 ${filter === option ? 'bg-white text-ink' : 'text-white hover:bg-white/10'}`}
+                className={`min-h-10 rounded-full px-3 py-2 text-sm font-bold transition sm:min-w-24 sm:px-4 lg:min-w-0 ${filter === option ? 'bg-white text-ink' : 'text-white hover:bg-white/10'}`}
               >
                 {option}
               </button>
