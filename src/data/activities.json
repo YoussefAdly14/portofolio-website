@@ -1,28 +1,8 @@
 [
   {
-    "id": "revive-digital-marketing-member",
-    "organization": "Revive GUC",
-    "position": "Digital Marketing Member",
-    "duration": "Oct 2025 - Present",
-    "location": "New Cairo, Egypt",
-    "description": "Created and edited digital marketing content for club campaigns and events.",
-    "responsibilities": [
-      "Edited and captured event media for club promotion.",
-      "Created digital campaigns to promote Revive GUC events.",
-      "Supported event communication through visual content."
-    ],
-    "skills": ["Digital Marketing", "Content Creation", "Event Media", "Campaigns"],
-    "images": [
-      {
-        "src": "/media/activities/digital-marketing-member.jpg",
-        "alt": "Revive GUC digital marketing team gathering at a campus event"
-      }
-    ]
-  },
-  {
     "id": "guc-mun-vice-president",
     "organization": "GUC MUN",
-    "position": "Vice President",
+    "position": "President",
     "duration": "Feb 2024 - Present",
     "location": "New Cairo, Egypt",
     "description": "Led large member groups and managed directors across delegate teams for a successful MUN year.",
@@ -31,7 +11,12 @@
       "Trained and managed 8 directors responsible for over 100 delegates.",
       "Strengthened leadership, communication, and organizational workflows."
     ],
-    "skills": ["Leadership", "Team Management", "Communication", "Organization"],
+    "skills": [
+      "Leadership",
+      "Team Management",
+      "Communication",
+      "Organization"
+    ],
     "images": [
       {
         "src": "/media/activities/vice-president-mun.jpg",
@@ -56,6 +41,52 @@
     ]
   },
   {
+    "id": "parents-usher",
+    "organization": "GUC Events Office",
+    "position": "Parents Graduation Usher",
+    "duration": "Sept 2026 - Oct 2026",
+    "location": "German University in Cairo",
+    "description": "Supported operations for the GUC graduation ceremony, one of Egypt's largest graduation events.",
+    "responsibilities": [
+      "Assisted in organizing graduation ceremony flow and operations."
+    ],
+    "skills": [
+      "Event Support",
+      "Ushering"
+    ],
+    "images": [
+      {
+        "src": "/media/activities/whatsapp-image-2026-10-24-at-7-42-21-pm.webp",
+        "alt": "During event"
+      }
+    ]
+  },
+  {
+    "id": "revive-digital-marketing-member",
+    "organization": "Revive GUC",
+    "position": "Digital Marketing Member",
+    "duration": "Oct 2025 - Jul 2026",
+    "location": "New Cairo, Egypt",
+    "description": "Created and edited digital marketing content for club campaigns and events.",
+    "responsibilities": [
+      "Edited and captured event media for club promotion.",
+      "Created digital campaigns to promote Revive GUC events.",
+      "Supported event communication through visual content."
+    ],
+    "skills": [
+      "Digital Marketing",
+      "Content Creation",
+      "Event Media",
+      "Campaigns"
+    ],
+    "images": [
+      {
+        "src": "/media/activities/digital-marketing-member.jpg",
+        "alt": "Revive GUC digital marketing team gathering at a campus event"
+      }
+    ]
+  },
+  {
     "id": "graduation-caps-gowns-usher",
     "organization": "GUC Events Office",
     "position": "Graduation Caps & Gowns Usher",
@@ -67,7 +98,12 @@
       "Coordinated event logistics to support a smooth attendee experience.",
       "Contributed to the success of a high-volume university event."
     ],
-    "skills": ["Event Operations", "Logistics", "Coordination", "Ushering"],
+    "skills": [
+      "Event Operations",
+      "Logistics",
+      "Coordination",
+      "Ushering"
+    ],
     "images": [
       {
         "src": "/media/activities/caps-gowns-usher.jpg",
@@ -87,7 +123,12 @@
       "Collaborated with the Seating Team to improve team bonding.",
       "Designed workshop and activity ideas for multiple teams."
     ],
-    "skills": ["HR Coordination", "Team Bonding", "Workshop Planning", "Communication"],
+    "skills": [
+      "HR Coordination",
+      "Team Bonding",
+      "Workshop Planning",
+      "Communication"
+    ],
     "images": [
       {
         "src": "/media/activities/orientation-ushering.jpg",
@@ -107,7 +148,12 @@
       "Supported team projects and communication.",
       "Helped improve guest experience through attentive event support."
     ],
-    "skills": ["Guest Relations", "Event Support", "Communication", "Ushering"],
+    "skills": [
+      "Guest Relations",
+      "Event Support",
+      "Communication",
+      "Ushering"
+    ],
     "images": [
       {
         "src": "/media/activities/tedx-ushering.jpg",
@@ -127,7 +173,12 @@
       "Collaborated with the Digital Marketing team to strengthen team bonding.",
       "Planned workshops and activities for multiple teams."
     ],
-    "skills": ["HR", "Teamwork", "Internal Communication", "Planning"],
+    "skills": [
+      "HR",
+      "Teamwork",
+      "Internal Communication",
+      "Planning"
+    ],
     "images": [
       {
         "src": "/media/activities/revive-hr-member.jpg",
@@ -147,7 +198,12 @@
       "Managed logistics and communication for over 12 companies across two rows during shift gaps.",
       "Coordinated with exhibitors including Infomenia, Halliburton, LEONI, and Kader and Associates Designs."
     ],
-    "skills": ["Event Logistics", "Stakeholder Support", "Communication", "Initiative"],
+    "skills": [
+      "Event Logistics",
+      "Stakeholder Support",
+      "Communication",
+      "Initiative"
+    ],
     "images": [
       {
         "src": "/media/activities/employment-fair-usher-1.jpg",
@@ -171,7 +227,12 @@
       "Facilitated campus partnerships that improved brand visibility and club funding.",
       "Built professional connections with business owners."
     ],
-    "skills": ["Fundraising", "Sponsorships", "Partnerships", "Networking"],
+    "skills": [
+      "Fundraising",
+      "Sponsorships",
+      "Partnerships",
+      "Networking"
+    ],
     "images": [
       {
         "src": "/media/activities/el-warsha-fundraising.jpg",
@@ -191,7 +252,12 @@
       "Coordinated logistics and helped maintain smooth operations.",
       "Contributed to the overall success of the ceremony."
     ],
-    "skills": ["Event Flow", "Operations", "Logistics", "Ushering"],
+    "skills": [
+      "Event Flow",
+      "Operations",
+      "Logistics",
+      "Ushering"
+    ],
     "images": [
       {
         "src": "/media/activities/graduation-flow-usher-1.jpg",
@@ -215,7 +281,12 @@
       "Marketed events through posters and flyers.",
       "Edited videos to promote IEEE events."
     ],
-    "skills": ["Marketing", "Public Relations", "Video Editing", "Event Promotion"],
+    "skills": [
+      "Marketing",
+      "Public Relations",
+      "Video Editing",
+      "Event Promotion"
+    ],
     "images": [
       {
         "src": "/media/activities/ieee-marketing-pr.jpg",

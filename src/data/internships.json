@@ -3,39 +3,61 @@
     "id": "flyrank-machine-learning",
     "company": "FlyRank",
     "position": "Machine Learning Internship",
-    "duration": "2026 - Present",
-    "location": "Remote / Ongoing",
+    "duration": "Jul 2026 - Aug 2026",
+    "location": "Remote",
     "description": "Ongoing machine learning internship focused on building practical AI/ML foundations through structured applied work.",
     "responsibilities": [
       "Studying applied machine learning workflows through a structured internship format.",
       "Building practical Python and ML knowledge to support future AI and software projects.",
       "Strengthening model-development fundamentals including data preparation, evaluation, and problem framing."
     ],
-    "technologies": ["Machine Learning", "Python", "AI Fundamentals"],
-    "skills": ["Machine Learning", "Problem Solving", "Applied AI"],
+    "technologies": [
+      "Machine Learning",
+      "Python",
+      "AI Fundamentals"
+    ],
+    "skills": [
+      "Machine Learning",
+      "Problem Solving",
+      "Applied AI"
+    ],
     "status": "Ongoing",
-    "website": ""
+    "website": "",
+    "projectLink": null,
+    "images": []
   },
   {
     "id": "foodics-frontend-engineering",
     "company": "Foodics",
     "position": "Frontend Software Engineering Intern",
-    "duration": "2026 - Present",
-    "location": "Ongoing",
+    "duration": "Jul 2026 - Aug 2026",
+    "location": "New Cairo",
     "description": "Ongoing frontend software engineering internship at Foodics connected to a deployed Foolix ordering interface.",
     "responsibilities": [
       "Worked with a deployed Vue-based ordering project covering cashier and admin workflows.",
       "Practiced production-style frontend routing, state management, and API integration patterns.",
       "Linked internship work back to the Foolix frontend project so reviewers can inspect the shipped interface."
     ],
-    "technologies": ["Frontend Engineering", "JavaScript", "Vue 3", "Vite", "Pinia"],
-    "skills": ["Frontend Development", "UI Implementation", "State Management", "Team Workflow"],
+    "technologies": [
+      "Frontend Engineering",
+      "JavaScript",
+      "Vue 3",
+      "Vite",
+      "Pinia"
+    ],
+    "skills": [
+      "Frontend Development",
+      "UI Implementation",
+      "State Management",
+      "Team Workflow"
+    ],
     "status": "Ongoing",
     "website": "",
     "projectLink": {
       "label": "View Foolix Frontend Project",
       "href": "/projects/personal#foodics-internship-frontend"
-    }
+    },
+    "images": []
   },
   {
     "id": "geidea-it-security",
@@ -50,10 +72,21 @@
       "Provided end-user technical support to ensure minimal downtime.",
       "Tracked and documented issues using Jira ticketing workflows."
     ],
-    "technologies": ["Windows", "BIOS", "Jira", "IT Support"],
-    "skills": ["Troubleshooting", "Technical Support", "Documentation", "Security Basics"],
+    "technologies": [
+      "Windows",
+      "BIOS",
+      "Jira",
+      "IT Support"
+    ],
+    "skills": [
+      "Troubleshooting",
+      "Technical Support",
+      "Documentation",
+      "Security Basics"
+    ],
     "status": "Completed",
     "website": "",
+    "projectLink": null,
     "images": [
       {
         "src": "/media/internships/geidea-it-security-main.jpg",
@@ -78,8 +111,20 @@
       "Used Docker for consistent development environments.",
       "Validated APIs using Postman and wrote unit tests with Jest."
     ],
-    "technologies": ["Node.js", "PostgreSQL", "Prisma", "Docker", "Postman", "Jest"],
-    "skills": ["Backend Development", "API Testing", "Team Workflow", "Async Programming"],
+    "technologies": [
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Postman",
+      "Jest"
+    ],
+    "skills": [
+      "Backend Development",
+      "API Testing",
+      "Team Workflow",
+      "Async Programming"
+    ],
     "status": "Completed",
     "website": "",
     "projectLink": {
