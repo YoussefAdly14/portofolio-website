@@ -272,5 +272,26 @@
         "alt": "GUC IEEE Marketing and PR appreciation certificate photo"
       }
     ]
+  },
+  {
+    "id": "parents-usher",
+    "organization": "GUC Events Office",
+    "position": "Parents Graduation Usher",
+    "duration": "Sept 2026 - Oct 2026",
+    "location": "German University in Cairo",
+    "description": "Supported operations for the GUC graduation ceremony, one of Egypt's largest graduation events.",
+    "responsibilities": [
+      "Assisted in organizing graduation ceremony flow and operations."
+    ],
+    "skills": [
+      "Event Support",
+      "Ushering"
+    ],
+    "images": [
+      {
+        "src": "/media/activities/whatsapp-image-2026-10-24-at-7-42-21-pm.webp",
+        "alt": "During event"
+      }
+    ]
   }
 ]
