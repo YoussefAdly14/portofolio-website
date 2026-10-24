@@ -1,30 +1,5 @@
 [
   {
-    "id": "revive-digital-marketing-member",
-    "organization": "Revive GUC",
-    "position": "Digital Marketing Member",
-    "duration": "Oct 2025 - Jul 2026",
-    "location": "New Cairo, Egypt",
-    "description": "Created and edited digital marketing content for club campaigns and events.",
-    "responsibilities": [
-      "Edited and captured event media for club promotion.",
-      "Created digital campaigns to promote Revive GUC events.",
-      "Supported event communication through visual content."
-    ],
-    "skills": [
-      "Digital Marketing",
-      "Content Creation",
-      "Event Media",
-      "Campaigns"
-    ],
-    "images": [
-      {
-        "src": "/media/activities/digital-marketing-member.jpg",
-        "alt": "Revive GUC digital marketing team gathering at a campus event"
-      }
-    ]
-  },
-  {
     "id": "guc-mun-vice-president",
     "organization": "GUC MUN",
     "position": "President",
@@ -62,6 +37,52 @@
       {
         "src": "/media/activities/mun-5.jpg",
         "alt": "GUC MUN group photo outdoors at night"
+      }
+    ]
+  },
+  {
+    "id": "parents-usher",
+    "organization": "GUC Events Office",
+    "position": "Parents Graduation Usher",
+    "duration": "Sept 2026 - Oct 2026",
+    "location": "German University in Cairo",
+    "description": "Supported operations for the GUC graduation ceremony, one of Egypt's largest graduation events.",
+    "responsibilities": [
+      "Assisted in organizing graduation ceremony flow and operations."
+    ],
+    "skills": [
+      "Event Support",
+      "Ushering"
+    ],
+    "images": [
+      {
+        "src": "/media/activities/whatsapp-image-2026-10-24-at-7-42-21-pm.webp",
+        "alt": "During event"
+      }
+    ]
+  },
+  {
+    "id": "revive-digital-marketing-member",
+    "organization": "Revive GUC",
+    "position": "Digital Marketing Member",
+    "duration": "Oct 2025 - Jul 2026",
+    "location": "New Cairo, Egypt",
+    "description": "Created and edited digital marketing content for club campaigns and events.",
+    "responsibilities": [
+      "Edited and captured event media for club promotion.",
+      "Created digital campaigns to promote Revive GUC events.",
+      "Supported event communication through visual content."
+    ],
+    "skills": [
+      "Digital Marketing",
+      "Content Creation",
+      "Event Media",
+      "Campaigns"
+    ],
+    "images": [
+      {
+        "src": "/media/activities/digital-marketing-member.jpg",
+        "alt": "Revive GUC digital marketing team gathering at a campus event"
       }
     ]
   },
@@ -270,27 +291,6 @@
       {
         "src": "/media/activities/ieee-marketing-pr.jpg",
         "alt": "GUC IEEE Marketing and PR appreciation certificate photo"
-      }
-    ]
-  },
-  {
-    "id": "parents-usher",
-    "organization": "GUC Events Office",
-    "position": "Parents Graduation Usher",
-    "duration": "Sept 2026 - Oct 2026",
-    "location": "German University in Cairo",
-    "description": "Supported operations for the GUC graduation ceremony, one of Egypt's largest graduation events.",
-    "responsibilities": [
-      "Assisted in organizing graduation ceremony flow and operations."
-    ],
-    "skills": [
-      "Event Support",
-      "Ushering"
-    ],
-    "images": [
-      {
-        "src": "/media/activities/whatsapp-image-2026-10-24-at-7-42-21-pm.webp",
-        "alt": "During event"
       }
     ]
   }
