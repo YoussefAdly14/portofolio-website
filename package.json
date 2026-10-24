@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/YoussefAdly14/portofolio-website#readme",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "@vitejs/plugin-react": "^6.0.3",
     "clsx": "^2.1.1",
     "gsap": "^3.15.0",

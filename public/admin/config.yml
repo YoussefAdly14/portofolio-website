@@ -1,0 +1,218 @@
+# Content manager for the portfolio (Sveltia CMS).
+# It edits the JSON files in src/data and uploads photos into public/media.
+# Saving commits to GitHub; the site itself is never modified by this page.
+
+backend:
+  name: github
+  repo: YoussefAdly14/portofolio-website
+  branch: main
+  auth_methods: [token]
+  commit_messages:
+    create: 'Content: add {{collection}} "{{slug}}"'
+    update: 'Content: update {{collection}} "{{slug}}"'
+    delete: 'Content: delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Content: upload "{{path}}"'
+    deleteMedia: 'Content: delete "{{path}}"'
+
+app_title: Portfolio Content Manager
+
+media_folder: public/media
+public_folder: /media
+
+media_libraries:
+  default:
+    config:
+      max_file_size: 25000000
+      slugify_filename: true
+      # Phone photos are shrunk and converted on upload so pages stay fast.
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 1920
+          height: 1920
+
+output:
+  json:
+    indent_size: 2
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: experience
+    label: Experience
+    icon: work
+    files:
+      # ----------------------------------------------------------- Internships
+      - name: internships
+        label: Internships
+        file: src/data/internships.json
+        format: json
+        fields:
+          - name: internships
+            label: Internships
+            label_singular: Internship
+            widget: list
+            root: true
+            collapsed: true
+            summary: '{{fields.company}} | {{fields.position}} ({{fields.duration}})'
+            hint: Drag to reorder. The order here is the order on the site (newest first).
+            fields:
+              - &id_field
+                name: id
+                label: ID
+                widget: string
+                pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Use lowercase letters, numbers and dashes only, e.g. acme-backend-intern']
+                hint: Unique short name used in links, e.g. acme-backend-intern. Don't change it on existing entries.
+              - { name: company, label: Company, widget: string }
+              - { name: position, label: Position, widget: string }
+              - { name: duration, label: Duration, widget: string, hint: 'e.g. Jul 2025 - Aug 2025, or 2026 - Present' }
+              - { name: location, label: Location, widget: string }
+              - { name: description, label: Short description, widget: text }
+              - { name: responsibilities, label: Responsibilities, label_singular: Responsibility, widget: list, field: { name: item, label: Responsibility, widget: text } }
+              - { name: technologies, label: Technologies, widget: list }
+              - { name: skills, label: Skills, widget: list }
+              - { name: status, label: Status, widget: select, options: [Ongoing, Completed], default: Ongoing }
+              - { name: website, label: Company website, widget: string, required: false }
+              - name: projectLink
+                label: Link to a related project
+                widget: object
+                required: false
+                hint: Optional button that points to one of your projects.
+                fields:
+                  - { name: label, label: Button text, widget: string, hint: 'e.g. View Foolics API Project' }
+                  - { name: href, label: Link, widget: string, hint: 'e.g. /projects/personal#project-id or /projects/university#project-id' }
+              - name: images
+                label: Photos
+                label_singular: Photo
+                widget: list
+                required: false
+                hint: The first photo is the cover. Drag to reorder.
+                summary: '{{fields.alt}}'
+                thumbnail: src
+                fields:
+                  - { name: src, label: Photo, widget: image, choose_url: false, media_folder: /public/media/internships, public_folder: /media/internships }
+                  - { name: alt, label: Photo description, widget: string, hint: 'Short description for screen readers, e.g. Team photo at the office' }
+
+      # ------------------------------------------------ Extracurricular / volunteering
+      - name: activities
+        label: Extracurriculars & Volunteering
+        file: src/data/activities.json
+        format: json
+        fields:
+          - name: activities
+            label: Activities
+            label_singular: Activity
+            widget: list
+            root: true
+            collapsed: true
+            summary: '{{fields.organization}} | {{fields.position}} ({{fields.duration}})'
+            hint: Drag to reorder. The order here is the order on the site.
+            fields:
+              - *id_field
+              - { name: organization, label: Organization, widget: string }
+              - { name: position, label: Position / role, widget: string }
+              - { name: duration, label: Duration, widget: string, hint: 'e.g. Sep 2025 - Oct 2025, or Feb 2024 - Present' }
+              - { name: location, label: Location, widget: string }
+              - { name: description, label: Short description, widget: text }
+              - { name: responsibilities, label: Responsibilities, label_singular: Responsibility, widget: list, field: { name: item, label: Responsibility, widget: text } }
+              - { name: skills, label: Skills, widget: list }
+              - name: images
+                label: Photos
+                label_singular: Photo
+                widget: list
+                required: false
+                hint: The first photo is the cover. Drag to reorder.
+                summary: '{{fields.alt}}'
+                thumbnail: src
+                fields:
+                  - { name: src, label: Photo, widget: image, choose_url: false, media_folder: /public/media/activities, public_folder: /media/activities }
+                  - { name: alt, label: Photo description, widget: string, hint: 'Short description for screen readers, e.g. Team photo on campus' }
+
+  # ----------------------------------------------------------------- Projects
+  - name: work
+    label: Projects
+    icon: code
+    files:
+      - name: projects
+        label: Projects
+        file: src/data/projects.json
+        format: json
+        fields:
+          - name: projects
+            label: Projects
+            label_singular: Project
+            widget: list
+            root: true
+            collapsed: true
+            summary: '{{fields.title}} ({{fields.category}}, {{fields.date}})'
+            hint: The site sorts projects by date automatically.
+            fields:
+              - *id_field
+              - { name: title, label: Title, widget: string }
+              - { name: category, label: Category, widget: select, options: [Personal, University] }
+              - { name: description, label: Short description, widget: text }
+              - { name: details, label: Details, label_singular: Detail, widget: list, field: { name: item, label: Detail, widget: text } }
+              - { name: technologies, label: Technologies, widget: list }
+              - { name: image, label: Cover image, widget: image, choose_url: false, media_folder: /public/media/projects, public_folder: /media/projects }
+              - name: media
+                label: Preview media
+                widget: object
+                hint: What shows in the project card. Use a video for a demo, or an image.
+                fields:
+                  - { name: type, label: Type, widget: select, options: [image, video], default: image }
+                  - { name: src, label: Image or video file, widget: file, choose_url: false, accept: 'image/*,video/webm,video/mp4', media_folder: /public/media/projects, public_folder: /media/projects }
+                  - { name: poster, label: Video poster image (videos only), widget: image, required: false, choose_url: false, media_folder: /public/media/projects, public_folder: /media/projects }
+                  - { name: alt, label: Media description, widget: string }
+              - { name: github, label: GitHub link, widget: string, required: false }
+              - { name: demo, label: Live demo link, widget: string, required: false }
+              - { name: featured, label: Feature on home page, widget: boolean, default: false, hint: 'The home page shows the first 3 featured projects.' }
+              - { name: date, label: Date, widget: string, hint: 'e.g. 2026, Fall 2025, or Sep 2025 - Jan 2026' }
+              - { name: status, label: Status, widget: string, hint: 'e.g. Completed, In Progress, Deployed' }
+              - { name: mediaNote, label: Media note, widget: text, required: false }
+
+  # ------------------------------------------------------------ About & contact
+  - name: profile
+    label: About & Contact
+    icon: person
+    files:
+      - name: profile
+        label: Profile (About page & home intro)
+        file: src/data/profile.json
+        format: json
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: string }
+          - { name: introduction, label: Introduction, widget: text }
+          - { name: location, label: Location, widget: string }
+          - { name: currentUniversity, label: University, widget: string }
+          - { name: degree, label: Degree, widget: string }
+          - { name: interests, label: Interests, widget: list }
+          - { name: futureGoals, label: Future goals, widget: text }
+          - name: journey
+            label: Journey timeline
+            label_singular: Step
+            widget: list
+            collapsed: true
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Subtitle, widget: string }
+              - { name: description, label: Description, widget: text }
+
+      - name: contact
+        label: Contact details
+        file: src/data/contact.json
+        format: json
+        fields:
+          - { name: email, label: Email, widget: string }
+          - { name: phone, label: Phone, widget: string }
+          - { name: whatsapp, label: WhatsApp link, widget: string, hint: 'e.g. https://wa.me/201234567890' }
+          - { name: linkedin, label: LinkedIn URL, widget: string }
+          - { name: github, label: GitHub URL, widget: string }
+          - { name: instagram, label: Instagram URL, widget: string }
+          - { name: instagramHandle, label: Instagram handle, widget: string }
+          - { name: location, label: Location, widget: string }
