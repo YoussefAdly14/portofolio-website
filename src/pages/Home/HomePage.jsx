@@ -260,24 +260,21 @@ function HomePage() {
                     key={project.id}
                     className={`${index > 0 ? 'hidden sm:block' : ''} overflow-hidden`}
                     borderRadius={8}
-                    backgroundColor="rgba(13, 17, 29, 0.74)"
+                    backgroundColor="rgba(13, 17, 29, 0.78)"
                     glowColor="195 90 70"
                     glowRadius={18}
-                    fillOpacity={0.14}
+                    fillOpacity={0.18}
                   >
-                    <article className="flex min-w-0 flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
-                      <div className="min-w-0 space-y-2">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="break-words text-xl font-semibold text-white">{project.title}</h3>
-                          <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-cyan-100">
-                            {project.category}
-                          </span>
-                        </div>
-                        <p className="max-w-2xl break-words text-sm leading-7 text-slate-300">{project.description}</p>
+                    <article className="space-y-5 p-6">
+                      <div className="space-y-2">
+                        <p className="text-sm font-semibold text-cyan-100">{project.date}</p>
+                        <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
+                        <p className="text-sm font-medium text-slate-400">{project.category}</p>
+                        <p className="text-sm leading-7 text-slate-300">{project.description}</p>
                       </div>
-                      <div className="flex shrink-0 flex-wrap gap-2">
-                        {project.technologies.slice(0, 3).map(technology => (
-                          <span key={technology} className="rounded-full bg-white px-3 py-1 text-xs font-bold text-ink">
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.slice(0, 5).map(technology => (
+                          <span key={technology} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-slate-200">
                             {technology}
                           </span>
                         ))}
