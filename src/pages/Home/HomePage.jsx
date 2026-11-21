@@ -13,6 +13,22 @@ import projects from '../../data/projects.json';
 import internships from '../../data/internships.json';
 import activities from '../../data/activities.json';
 
+const PROJECT_MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+
+function getProjectDateValue(date = '') {
+  const latest = [...date.matchAll(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|Spring|Summer|Fall|Winter)?\s*(\d{4})/gi)].at(-1);
+  if (!latest) return 0;
+
+  const monthName = latest[1]?.toLowerCase();
+  const seasonalMonths = { spring: 4, summer: 7, fall: 10, winter: 11 };
+  const month = monthName ? (seasonalMonths[monthName] ?? PROJECT_MONTHS.indexOf(monthName)) : 11;
+  return new Date(Number(latest[2]), month, 1).getTime();
+}
+
+const latestProjects = [...projects]
+  .sort((a, b) => getProjectDateValue(b.date) - getProjectDateValue(a.date))
+  .slice(0, 3);
+
 const projectCounts = projects.reduce(
   (counts, project) => {
     const key = project.category?.toLowerCase();
@@ -80,7 +96,6 @@ function SectionIntro({ eyebrow, title, description, action }) {
 
 function HomePage() {
   const navigate = useNavigate();
-  const featuredProjects = projects.filter(project => project.featured).slice(0, 3);
 
   return (
     <main className="relative isolate min-h-screen overflow-hidden bg-ink text-white">
@@ -240,7 +255,7 @@ function HomePage() {
               </div>
 
               <div className="grid gap-4">
-                {featuredProjects.map((project, index) => (
+                {latestProjects.map((project, index) => (
                   <BorderGlow
                     key={project.id}
                     className={`${index > 0 ? 'hidden sm:block' : ''} overflow-hidden`}
