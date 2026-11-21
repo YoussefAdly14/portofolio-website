@@ -26,7 +26,7 @@
   },
   {
     "id": "foodics-ordering-backend",
-    "title": "Foolics API",
+    "title": "Foolics API - Online Food Ordering Backend System",
     "category": "Personal",
     "description": "A Foodics internship backend API for an online ordering system, built to support a separate frontend team with documented auth, cart, order, stock, and admin workflows.",
     "details": [
@@ -50,7 +50,7 @@
   },
   {
     "id": "foodics-internship-frontend",
-    "title": "Foolix Foodics Frontend Internship App",
+    "title": "Foolix Frontend App",
     "category": "Personal",
     "description": "A deployed Vue 3 ordering app for Foolix with role-based cashier POS and operations dashboard experiences built during the Foodics frontend internship.",
     "details": [
@@ -69,7 +69,7 @@
     "github": "https://github.com/nasserahmed009/foodics-internship-2026-FE",
     "demo": "https://foodics-internship-2026-fe.vercel.app",
     "featured": true,
-    "date": "2026",
+    "date": "Jul 2026 - Jul 2026",
     "status": "Deployed",
     "mediaNote": "Captured from the deployed Foolix admin dashboard on Vercel."
   },
@@ -143,7 +143,7 @@
     "github": "",
     "demo": "",
     "featured": false,
-    "date": "Fall 2025",
+    "date": "Sep 2025 - Jan 2026",
     "status": "Completed",
     "mediaNote": "Converted from the attached Smart Conveyor Belt demo video."
   },
@@ -168,7 +168,7 @@
     "github": "https://github.com/YoussefAdly14/Operating-System-Project-",
     "demo": "",
     "featured": true,
-    "date": "2026",
+    "date": "Mar 2026 - Jun 2026",
     "status": "Completed",
     "mediaNote": "Captured from the local Kernel Studio dashboard."
   },
@@ -193,13 +193,13 @@
     "github": "https://github.com/YoussefAdly14/Computer-Architecture-Project",
     "demo": "",
     "featured": false,
-    "date": "2026",
+    "date": "Mar 2026 - Jun 2026",
     "status": "Completed",
     "mediaNote": "Captured from the local static processor GUI."
   },
   {
     "id": "special-folio",
-    "title": "Special Folio",
+    "title": "SpecialFolio",
     "category": "University",
     "description": "A React portfolio platform for students, instructors, employers, and admins to showcase projects, manage portfolios, and connect around internships.",
     "details": [
@@ -218,8 +218,146 @@
     "github": "https://github.com/Software-Engineering-Spring-2026/The-special-ones",
     "demo": "",
     "featured": true,
-    "date": "Spring 2026",
+    "date": "Mar 2026 - Jun 2026",
     "status": "Completed",
     "mediaNote": "Captured from the local React/Vite app."
+  },
+  {
+    "id": "tomasulo-algorithm-simulator",
+    "title": "Tomasulo Algorithm Simulator",
+    "category": "University",
+    "description": "An interactive, cycle-by-cycle MIPS assembly simulator using Tomasulo's algorithm for Microprocessors (CSEN 702), with loops, integer operations, and floating-point execution.",
+    "details": [
+      "Implemented dynamic instruction scheduling and register renaming to handle RAW, WAR, and WAW hazards, with arbitration for competing Common Data Bus results.",
+      "Modeled a configurable data cache and byte-addressable memory with hit/miss timing and load/store address-conflict handling.",
+      "Integrated a two-bit branch predictor with instruction flushing on misprediction and an in-order pipeline mode for comparison with out-of-order execution.",
+      "Visualized reservation stations, load/store buffers, register files, cache contents, and instruction queues, with configurable latencies and hardware capacities."
+    ],
+    "technologies": [
+      "Tomasulo Algorithm",
+      "MIPS",
+      "Dynamic Scheduling",
+      "Register Renaming",
+      "Cache",
+      "Branch Prediction"
+    ],
+    "image": "/media/projects/project-api.svg",
+    "media": {},
+    "github": "",
+    "demo": "",
+    "featured": false,
+    "date": "Nov 2026 - Present",
+    "status": "In Progress",
+    "mediaNote": "Project preview not yet available."
+  },
+  {
+    "id": "rps-guardian",
+    "title": "RPS Guardian - Vision-Based Robotic Hand",
+    "category": "University",
+    "description": "Developing an ARM-based robotic hand that plays Rock-Paper-Scissors through camera-based gesture recognition and servo-controlled fingers for Embedded Systems Architecture (CSEN 701).",
+    "details": [
+      "Developing C/C++ firmware using the Raspberry Pi Pico SDK and modular drivers for an analog force sensor through ADC, a keypad and limit switches through GPIO, and a DC reward-drawer motor through an H-bridge.",
+      "Integrating C++ vision processing over USB serial, using timestamps and round IDs to synchronize gesture capture, robotic movement, and scoring while rejecting stale or duplicate results.",
+      "Designing dual-core processing with a synchronized bounded queue to separate communication handling from game timing and actuator control.",
+      "Completed modeling of six concurrent subsystems in MATLAB/Simulink Stateflow using hierarchical state machines and event broadcasting, including motion-stop handling, communication faults, and motor timeout recovery; firmware and hardware integration remain in progress."
+    ],
+    "technologies": [
+      "C",
+      "C++",
+      "ARM",
+      "Pico SDK",
+      "ADC",
+      "GPIO",
+      "USB Serial",
+      "MATLAB/Simulink",
+      "Stateflow"
+    ],
+    "image": "/media/projects/project-api.svg",
+    "media": {},
+    "github": "",
+    "demo": "",
+    "featured": false,
+    "date": "Oct 2026 - Present",
+    "status": "In Progress",
+    "mediaNote": "Project preview not yet available."
+  },
+  {
+    "id": "ninja-turtles-game",
+    "title": "Ninja Turtles - 2D Defense Game & 3D World Exploration",
+    "category": "University",
+    "description": "A Computer Graphics project combining a Ninja Turtles-themed 2D tower defense game with interactive 3D world exploration using C++, OpenGL 3.3, GLSL, and GLM.",
+    "details": [
+      "Implemented lane-based combat with AABB collision detection, melee and projectile attacks, defensive shields, and progressively challenging enemy waves.",
+      "Built two explorable 3D environments with imported textured models, model transformations, and custom vertex and fragment shaders using directional, point, and spotlight lighting.",
+      "Implemented first-person and third-person cameras, top/front/side views, frame-rate-independent movement, and object interactions triggered by proximity and viewing angle.",
+      "Created keyframe-based cutscenes and coordinated horror effects combining camera movement, dynamic lighting, and object animation."
+    ],
+    "technologies": [
+      "C++",
+      "OpenGL 3.3",
+      "GLSL",
+      "GLM",
+      "AABB Collision Detection"
+    ],
+    "image": "/media/projects/project-api.svg",
+    "media": {},
+    "github": "https://github.com/YoussefAdly14/Ninja-Turtles-Game",
+    "demo": "",
+    "featured": false,
+    "date": "Oct 2026 - Present",
+    "status": "In Progress",
+    "mediaNote": "Project preview not yet available."
+  },
+  {
+    "id": "university-schedule-management-system",
+    "title": "University Schedule Management System",
+    "category": "University",
+    "description": "Collaborating in a ten-member team on a full-stack MERN academic scheduling and advising platform for Advanced Computer Lab.",
+    "details": [
+      "Developing dedicated dashboards for four user roles with JWT authentication and backend role-based access control.",
+      "Implementing course offerings, timetable templates, enrollment, and student assignments with room/instructor conflict detection and seat-capacity validation.",
+      "Using MongoDB transactions and conditional atomic updates to keep schedules and seat allocations consistent during concurrent requests.",
+      "Developing schedule swaps, extra credit-hour approvals, eligibility checks, course pricing, and academic-history access with PDF transcripts and CSV activity exports."
+    ],
+    "technologies": [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "JWT",
+      "Role-Based Access Control"
+    ],
+    "image": "/media/projects/project-api.svg",
+    "media": {},
+    "github": "https://github.com/Advanced-Computer-Lab-2026/Acl-w-Shorb",
+    "demo": "",
+    "featured": false,
+    "date": "Sep 2026 - Present",
+    "status": "In Progress",
+    "mediaNote": "Project preview not yet available."
+  },
+  {
+    "id": "jackaroo-board-game",
+    "title": "Jackaroo Board Game",
+    "category": "University",
+    "description": "A single-player Java Jackaroo board game applying object-oriented programming, data structures, and algorithms.",
+    "details": [
+      "Designed a modular game engine using interfaces, inheritance, enums, and exception handling to enforce complex game rules.",
+      "Implemented movement validation, swapping, traps, and safe zones with turn-based gameplay and AI players."
+    ],
+    "technologies": [
+      "Java",
+      "OOP",
+      "Data Structures",
+      "Algorithms"
+    ],
+    "image": "/media/projects/project-api.svg",
+    "media": {},
+    "github": "",
+    "demo": "",
+    "featured": false,
+    "date": "Feb 2025 - Jun 2025",
+    "status": "Completed",
+    "mediaNote": "Project preview not yet available."
   }
 ]
